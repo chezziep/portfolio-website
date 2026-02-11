@@ -5,4 +5,3 @@ globalStyle('body, body *', {
   fontFamily: "'Rubik', system-ui, -apple-system, sans-serif !important" as any,
   fontWeight: '300 !important' as any,
 });
-
