@@ -115,32 +115,26 @@ export default function App() {
             </PageBlock>
 
             <PageBlock width="large">
-              <Columns space="large" collapseBelow="tablet">
-                <Column>
-                  <ArticleCard
-                    title="Designing beyond the system: Going custom with purpose"
-                    subtitle="How custom solutions uplift products, evolve design systems and save money."
-                    link="https://medium.com/design-systems-collective/designing-beyond-the-system-going-custom-with-purpose-6623a08d49b7"
-                    image={custom}
-                  />
-                </Column>
-                <Column>
-                  <ArticleCard
-                    title="With great persuasion comes great responsibility: Ethics in design"
-                    subtitle="Practical frameworks to ensure ethical and responsible product design."
-                    link="https://medium.com/p/adedcbe1bb66"
-                    image={ethics}
-                  />
-                </Column>
-                <Column>
-                  <ArticleCard
-                    title="Choosing the right user research method for your project"
-                    subtitle="How to set your research up for success by choosing the best method for the best outcome."
-                    link="https://medium.com/p/3c7adace3bb9"
-                    image={research}
-                  />
-                </Column>
-              </Columns>
+              <Tiles space="small" columns={{ mobile: 1, desktop: 3 }}>
+                <ArticleCard
+                  title="Designing beyond the system: Going custom with purpose"
+                  subtitle="How custom solutions uplift products, evolve design systems and save money."
+                  link="https://medium.com/design-systems-collective/designing-beyond-the-system-going-custom-with-purpose-6623a08d49b7"
+                  image={custom}
+                />
+                <ArticleCard
+                  title="With great persuasion comes great responsibility: Ethics in design"
+                  subtitle="Practical frameworks to ensure ethical and responsible product design."
+                  link="https://medium.com/p/adedcbe1bb66"
+                  image={ethics}
+                />
+                <ArticleCard
+                  title="Choosing the right user research method for your project"
+                  subtitle="How to set your research up for success by choosing the best method for the best outcome."
+                  link="https://medium.com/p/3c7adace3bb9"
+                  image={research}
+                />
+              </Tiles>
             </PageBlock>
           </Stack>
         </Section>
