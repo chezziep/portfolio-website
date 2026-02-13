@@ -23,6 +23,11 @@ import {
   IconImage,
   IconSkills,
   IconExperience,
+  IconSocialLinkedIn,
+  IconSocialX,
+  IconSocialMedium,
+  IconSocialGitHub,
+  Link,
 } from 'braid-design-system';
 import seekJobs from 'braid-design-system/themes/seekJobs';
 import { NextSteps } from './NextSteps';
@@ -39,7 +44,23 @@ export default function App() {
 
   return (
     <BraidProvider theme={seekJobs}>
-      <Page footer={<div />}>
+      <Page
+        footer={
+          <Box background="neutral" padding="medium">
+            <PageBlock width={pageWidth}>
+              <Text size="xsmall" tone="secondary">
+                Made with the{' '}
+                <TextLink
+                  href="https://seek-oss.github.io/braid-design-system"
+                  target="_blank"
+                >
+                  Braid Design System
+                </TextLink>
+              </Text>
+            </PageBlock>
+          </Box>
+        }
+      >
         <Card>
           <Text size="large">Navigation will go here...</Text>
         </Card>
@@ -227,6 +248,36 @@ export default function App() {
                 title="UI & visual design"
                 icon={<IconImage size="fill" />}
               />
+            </Tiles>
+          </PageBlock>
+        </Section>
+
+        <Section tone="surface" title="Let's be friends :)">
+          <PageBlock width="small">
+            <Tiles space="xxsmall" columns={{ mobile: 1, tablet: 4 }}>
+              <Link
+                href="https://www.linkedin.com/in/cherylpaulsen/"
+                target="_blank"
+              >
+                <Heading component="div" level="1" align="center">
+                  <IconSocialLinkedIn />
+                </Heading>
+              </Link>
+              <Link href="https://medium.com/@cheryl.paulsen" target="_blank">
+                <Heading component="div" level="1" align="center">
+                  <IconSocialMedium />
+                </Heading>
+              </Link>
+              <Link href="https://x.com/Cheryl_Paulsen" target="_blank">
+                <Heading component="div" level="1" align="center">
+                  <IconSocialX />
+                </Heading>
+              </Link>
+              <Link href="https://github.com/cherylpaulsen" target="_blank">
+                <Heading component="div" level="1" align="center">
+                  <IconSocialGitHub />
+                </Heading>
+              </Link>
             </Tiles>
           </PageBlock>
         </Section>
