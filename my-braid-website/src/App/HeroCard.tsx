@@ -5,9 +5,18 @@ interface HeroCardProps {
   subtitle: string;
   link: string;
   image: string;
+  size?: 'standard' | 'large';
 }
 
-export function HeroCard({ title, subtitle, link, image }: HeroCardProps) {
+export function HeroCard({
+  title,
+  subtitle,
+  link,
+  image,
+  size = 'large',
+}: HeroCardProps) {
+  const minHeight = size === 'standard' ? '250px' : '500px';
+
   return (
     <Link href={link} target="_blank">
       <Box
@@ -18,7 +27,7 @@ export function HeroCard({ title, subtitle, link, image }: HeroCardProps) {
         position="relative"
         height="full"
         style={{
-          minHeight: '600px',
+          minHeight,
         }}
       >
         <Box

@@ -164,59 +164,80 @@ export default function App() {
         <Section tone="surface" title="Case studies">
           <Stack space="xxxlarge">
             <PageBlock width="large">
-              <Columns space="large" collapseBelow="tablet">
+              <Columns space="small" collapseBelow="tablet">
                 <Column>
-                  <HeroCard
-                    title="From components to consistency: Building our design
+                  <Stack space="small">
+                    <HeroCard
+                      size="large"
+                      title="From components to consistency: Building our design
                             system pattern library"
-                    subtitle="Establishing scalable solutions for recurring design
+                      subtitle="Establishing scalable solutions for recurring design
                             problems across Seek's products."
-                    link="https://www.designsystemscollective.com/from-components-to-consistency-building-our-design-system-pattern-library-5be3e6b761ce"
-                    image="https://cherylpaulsen.com/images/casestudy01_cover.png"
-                  />
+                      link="https://www.designsystemscollective.com/from-components-to-consistency-building-our-design-system-pattern-library-5be3e6b761ce"
+                      image="https://cherylpaulsen.com/images/casestudy01_cover.png"
+                    />
+                    <Columns space="small" collapseBelow="tablet">
+                      <Column>
+                        <HeroCard
+                          size="standard"
+                          title="From components to consistency: Building our design
+                            system pattern library"
+                          subtitle="Establishing scalable solutions for recurring design
+                            problems across Seek's products."
+                          link="https://www.designsystemscollective.com/from-components-to-consistency-building-our-design-system-pattern-library-5be3e6b761ce"
+                          image="https://cherylpaulsen.com/images/casestudy01_cover.png"
+                        />
+                      </Column>
+                      <Column>
+                        <HeroCard
+                          size="standard"
+                          title="From components to consistency: Building our design
+                            system pattern library"
+                          subtitle="Establishing scalable solutions for recurring design
+                            problems across Seek's products."
+                          link="https://www.designsystemscollective.com/from-components-to-consistency-building-our-design-system-pattern-library-5be3e6b761ce"
+                          image="https://cherylpaulsen.com/images/casestudy01_cover.png"
+                        />
+                      </Column>
+                    </Columns>
+                  </Stack>
                 </Column>
                 <Column>
-                  <HeroCard
-                    title="Driving a product experience across multiple integrations to increase adoption"
-                    subtitle="Elevating the quality and consistency of experience across third party integrations."
-                    link="https://medium.com/@cheryl.paulsen/product-experience-across-integrations-32d925d339b2"
-                    image="https://miro.medium.com/v2/resize:fit:720/format:webp/1*8NP9r_LYr2SZ8nOYzBM1yg.png"
-                  />
+                  <Stack space="small">
+                    <Columns space="small" collapseBelow="tablet">
+                      <Column>
+                        <HeroCard
+                          size="standard"
+                          title="From components to consistency: Building our design
+                            system pattern library"
+                          subtitle="Establishing scalable solutions for recurring design
+                            problems across Seek's products."
+                          link="https://www.designsystemscollective.com/from-components-to-consistency-building-our-design-system-pattern-library-5be3e6b761ce"
+                          image="https://cherylpaulsen.com/images/casestudy01_cover.png"
+                        />
+                      </Column>
+                      <Column>
+                        <HeroCard
+                          size="standard"
+                          title="From components to consistency: Building our design
+                            system pattern library"
+                          subtitle="Establishing scalable solutions for recurring design
+                            problems across Seek's products."
+                          link="https://www.designsystemscollective.com/from-components-to-consistency-building-our-design-system-pattern-library-5be3e6b761ce"
+                          image="https://cherylpaulsen.com/images/casestudy01_cover.png"
+                        />
+                      </Column>
+                    </Columns>
+                    <HeroCard
+                      size="large"
+                      title="Driving a product experience across multiple integrations to increase adoption"
+                      subtitle="Elevating the quality and consistency of experience across third party integrations."
+                      link="https://medium.com/@cheryl.paulsen/product-experience-across-integrations-32d925d339b2"
+                      image="https://miro.medium.com/v2/resize:fit:720/format:webp/1*8NP9r_LYr2SZ8nOYzBM1yg.png"
+                    />
+                  </Stack>
                 </Column>
               </Columns>
-            </PageBlock>
-            <PageBlock width="large">
-              <Stack space="xxlarge">
-                <Heading level="3" align="center">
-                  Other projects
-                </Heading>
-                <Columns space="large" collapseBelow="tablet">
-                  <Column>
-                    <ArticleCard
-                      title="Designing beyond the system: Going custom with purpose"
-                      subtitle="How custom solutions uplift products, evolve design systems and save money."
-                      link="https://medium.com/design-systems-collective/designing-beyond-the-system-going-custom-with-purpose-6623a08d49b7"
-                      image={custom}
-                    />
-                  </Column>
-                  <Column>
-                    <ArticleCard
-                      title="With great persuasion comes great responsibility: Ethics in design"
-                      subtitle="Practical frameworks to ensure ethical and responsible product design."
-                      link="https://medium.com/p/adedcbe1bb66"
-                      image={ethics}
-                    />
-                  </Column>
-                  <Column>
-                    <ArticleCard
-                      title="Choosing the right user research method for your project"
-                      subtitle="How to set your research up for success by choosing the best method for the best outcome."
-                      link="https://medium.com/p/3c7adace3bb9"
-                      image={research}
-                    />
-                  </Column>
-                </Columns>
-              </Stack>
             </PageBlock>
           </Stack>
         </Section>
