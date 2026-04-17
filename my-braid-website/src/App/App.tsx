@@ -37,6 +37,7 @@ import ethics from '../images/articleCover_ethics.png';
 import research from '../images/articleCover_research.png';
 import custom from '../images/articleCover_custom.png';
 import { ArticleCard } from './ArticleCard';
+import { HeroCard } from './HeroCard';
 import { SkillTile } from './SkillTile';
 
 export default function App() {
@@ -165,71 +166,21 @@ export default function App() {
             <PageBlock width="large">
               <Columns space="large" collapseBelow="tablet">
                 <Column>
-                  <Link href="#">
-                    <Box
-                      borderRadius="large"
-                      overflow="hidden"
-                      background="customDark"
-                      position="relative"
-                      style={{
-                        height: '600px',
-                      }}
-                    >
-                      <Box
-                        position="absolute"
-                        inset={0}
-                        style={{
-                          backgroundImage:
-                            'url("https://cherylpaulsen.com/images/casestudy01_cover.png?w=800&h=400&fit=crop")',
-                          backgroundSize: 'cover',
-                          backgroundPosition: 'center',
-                          transition: 'transform 0.3s ease',
-                          transform: 'scale(1)',
-                        }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.transform = 'scale(1.05)';
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.transform = 'scale(1)';
-                        }}
-                      />
-                      <Box
-                        position="absolute"
-                        inset={0}
-                        style={{
-                          background:
-                            'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 50%, transparent 100%)',
-                          pointerEvents: 'none',
-                        }}
-                      />
-                      <Box
-                        position="absolute"
-                        bottom={0}
-                        left={0}
-                        right={0}
-                        padding="large"
-                        style={{ pointerEvents: 'none' }}
-                      >
-                        <Stack space="small">
-                          <Heading level="2">
-                            From components to consistency: Building our design
-                            system pattern library
-                          </Heading>
-                          <Text size="large">
-                            Establishing scalable solutions for recurring design
-                            problems across Seek's products.
-                          </Text>
-                        </Stack>
-                      </Box>
-                    </Box>
-                  </Link>
+                  <HeroCard
+                    title="From components to consistency: Building our design
+                            system pattern library"
+                    subtitle="Establishing scalable solutions for recurring design
+                            problems across Seek's products."
+                    link="https://www.designsystemscollective.com/from-components-to-consistency-building-our-design-system-pattern-library-5be3e6b761ce"
+                    image="https://cherylpaulsen.com/images/casestudy01_cover.png"
+                  />
                 </Column>
                 <Column>
-                  <ArticleCard
-                    title="With great persuasion comes great responsibility: Ethics in design"
-                    subtitle="Practical frameworks to ensure ethical and responsible product design."
-                    link="https://medium.com/p/adedcbe1bb66"
-                    image={ethics}
+                  <HeroCard
+                    title="Driving a product experience across multiple integrations to increase adoption"
+                    subtitle="Elevating the quality and consistency of experience across third party integrations."
+                    link="https://medium.com/@cheryl.paulsen/product-experience-across-integrations-32d925d339b2"
+                    image="https://miro.medium.com/v2/resize:fit:720/format:webp/1*8NP9r_LYr2SZ8nOYzBM1yg.png"
                   />
                 </Column>
               </Columns>
