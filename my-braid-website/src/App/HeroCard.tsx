@@ -16,6 +16,8 @@ export function HeroCard({
   size = 'large',
 }: HeroCardProps) {
   const minHeight = size === 'standard' ? '250px' : '500px';
+  const headingLevel = size === 'standard' ? '3' : '2';
+  const textSize = size === 'standard' ? 'standard' : 'large';
 
   return (
     <Link href={link} target="_blank">
@@ -66,8 +68,8 @@ export function HeroCard({
           style={{ pointerEvents: 'none' }}
         >
           <Stack space="small">
-            <Heading level="2">{title}</Heading>
-            <Text size="large">{subtitle}</Text>
+            <Heading level={headingLevel}>{title}</Heading>
+            <Text size={textSize}>{subtitle}</Text>
           </Stack>
         </Box>
       </Box>
