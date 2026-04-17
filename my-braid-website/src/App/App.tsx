@@ -162,15 +162,67 @@ export default function App() {
 
         <Section tone="surface" title="Case studies">
           <Stack space="xxxlarge">
-            <PageBlock width={pageWidth}>
+            <PageBlock width="large">
               <Columns space="large" collapseBelow="tablet">
                 <Column>
-                  <ArticleCard
-                    title="Designing beyond the system: Going custom with purpose"
-                    subtitle="How custom solutions uplift products, evolve design systems and save money."
-                    link="https://medium.com/design-systems-collective/designing-beyond-the-system-going-custom-with-purpose-6623a08d49b7"
-                    image={custom}
-                  />
+                  <Link href="#">
+                    <Box
+                      borderRadius="large"
+                      overflow="hidden"
+                      background="customDark"
+                      position="relative"
+                      style={{
+                        height: '600px',
+                      }}
+                    >
+                      <Box
+                        position="absolute"
+                        inset={0}
+                        style={{
+                          backgroundImage:
+                            'url("https://cherylpaulsen.com/images/casestudy01_cover.png?w=800&h=400&fit=crop")',
+                          backgroundSize: 'cover',
+                          backgroundPosition: 'center',
+                          transition: 'transform 0.3s ease',
+                          transform: 'scale(1)',
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.transform = 'scale(1.05)';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.transform = 'scale(1)';
+                        }}
+                      />
+                      <Box
+                        position="absolute"
+                        inset={0}
+                        style={{
+                          background:
+                            'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 50%, transparent 100%)',
+                          pointerEvents: 'none',
+                        }}
+                      />
+                      <Box
+                        position="absolute"
+                        bottom={0}
+                        left={0}
+                        right={0}
+                        padding="large"
+                        style={{ pointerEvents: 'none' }}
+                      >
+                        <Stack space="small">
+                          <Heading level="2">
+                            From components to consistency: Building our design
+                            system pattern library
+                          </Heading>
+                          <Text size="large">
+                            Establishing scalable solutions for recurring design
+                            problems across Seek's products.
+                          </Text>
+                        </Stack>
+                      </Box>
+                    </Box>
+                  </Link>
                 </Column>
                 <Column>
                   <ArticleCard
