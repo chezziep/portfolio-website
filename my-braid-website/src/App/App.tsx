@@ -168,6 +168,7 @@ export default function App() {
                 <Column>
                   <Stack space="small">
                     <HeroCard
+                      featured={true}
                       size="large"
                       title="From components to consistency: Building our design
                             system pattern library"
@@ -229,6 +230,7 @@ export default function App() {
                       </Column>
                     </Columns>
                     <HeroCard
+                      featured={true}
                       size="large"
                       title="Driving a product experience across multiple integrations to increase adoption"
                       subtitle="Elevating the quality and consistency of experience across third party integrations."

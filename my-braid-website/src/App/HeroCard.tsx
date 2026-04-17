@@ -1,4 +1,4 @@
-import { Box, Heading, Text, Stack, Link } from 'braid-design-system';
+import { Box, Heading, Text, Stack, Link, Badge } from 'braid-design-system';
 
 interface HeroCardProps {
   title: string;
@@ -6,6 +6,7 @@ interface HeroCardProps {
   link: string;
   image: string;
   size?: 'standard' | 'large';
+  featured?: boolean;
 }
 
 export function HeroCard({
@@ -14,6 +15,7 @@ export function HeroCard({
   link,
   image,
   size = 'large',
+  featured = false,
 }: HeroCardProps) {
   const minHeight = size === 'standard' ? '250px' : '500px';
   const headingLevel = size === 'standard' ? '3' : '2';
@@ -68,6 +70,7 @@ export function HeroCard({
           style={{ pointerEvents: 'none' }}
         >
           <Stack space="small">
+            {featured ? <Badge tone="promote">Featured</Badge> : null}
             <Heading level={headingLevel}>{title}</Heading>
             <Text size={textSize}>{subtitle}</Text>
           </Stack>
