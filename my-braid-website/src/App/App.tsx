@@ -1,5 +1,4 @@
 import 'braid-design-system/reset'; // <-- MUST BE FIRST to avoid CSS ordering issues
-import '../global.css'; // Apply global font styles
 import {
   BraidProvider,
   Stack,
