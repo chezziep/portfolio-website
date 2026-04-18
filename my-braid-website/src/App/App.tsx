@@ -1,5 +1,4 @@
 import 'braid-design-system/reset'; // <-- MUST BE FIRST to avoid CSS ordering issues
-import '../global.css'; // Apply global font styles
 import {
   BraidProvider,
   Stack,
@@ -7,15 +6,12 @@ import {
   Text,
   Card,
   Page,
-  Button,
-  Alert,
   PageBlock,
   Columns,
   Column,
   ContentBlock,
   TextLink,
   Box,
-  Bleed,
   Tiles,
   IconRocket,
   IconDocument,
@@ -30,17 +26,17 @@ import {
   Link,
 } from 'braid-design-system';
 import seekJobs from 'braid-design-system/themes/seekJobs';
-import { NextSteps } from './NextSteps';
 import { Section } from './Section';
 import chez from '../images/Chez-SM.png';
 import ethics from '../images/articleCover_ethics.png';
 import research from '../images/articleCover_research.png';
 import custom from '../images/articleCover_custom.png';
 import { ArticleCard } from './ArticleCard';
+import { HeroCard } from './HeroCard';
 import { SkillTile } from './SkillTile';
 
 export default function App() {
-  const pageWidth = 'medium';
+  const pageWidth = 'large';
 
   return (
     <BraidProvider theme={seekJobs}>
@@ -106,33 +102,35 @@ export default function App() {
         <Section tone="brandAccent" title="About me">
           <Stack space="xxlarge">
             <PageBlock width={pageWidth}>
-              <Stack space="large">
-                <Text size="large">
-                  I'm a Product Designer with over 15 years experience and a
-                  bachelor&rsquo;s degree in Psychology. I love applying my
-                  behavioural knowledge to designs so I can help create products
-                  people love.
-                </Text>
-                <Text size="large">
-                  Working in design systems, I collaborate with engineers to
-                  implement and maintain components, patterns and usage
-                  guidelines that ensure best practice. I create code-based
-                  prototypes combining my design expertise with technical
-                  execution.
-                </Text>
-                <Text size="large">
-                  Check out a few of my recent blog articles below, or see more
-                  on{' '}
-                  <TextLink
-                    href="https://medium.com/@cheryl.paulsen"
-                    target="_blank"
-                    weight="weak"
-                  >
-                    Medium
-                  </TextLink>
-                  .
-                </Text>
-              </Stack>
+              <ContentBlock width="medium" align="left">
+                <Stack space="large">
+                  <Text size="large">
+                    I'm a Product Designer with over 15 years experience and a
+                    bachelor&rsquo;s degree in Psychology. I love applying my
+                    behavioural knowledge to designs so I can help create
+                    products people love.
+                  </Text>
+                  <Text size="large">
+                    Working in design systems, I collaborate with engineers to
+                    implement and maintain components, patterns and usage
+                    guidelines that ensure best practice. I create code-based
+                    prototypes combining my design expertise with technical
+                    execution.
+                  </Text>
+                  <Text size="large">
+                    Check out a few of my recent blog articles below, or see
+                    more on{' '}
+                    <TextLink
+                      href="https://medium.com/@cheryl.paulsen"
+                      target="_blank"
+                      weight="weak"
+                    >
+                      Medium
+                    </TextLink>
+                    .
+                  </Text>
+                </Stack>
+              </ContentBlock>
             </PageBlock>
 
             <PageBlock width="large">
@@ -160,60 +158,85 @@ export default function App() {
           </Stack>
         </Section>
 
-        <Section tone="surface" title="Case studies">
+        <Section tone="surface" title="Projects">
           <Stack space="xxxlarge">
-            <PageBlock width={pageWidth}>
-              <Columns space="large" collapseBelow="tablet">
+            <PageBlock width="large">
+              <Columns space="small" collapseBelow="tablet">
                 <Column>
-                  <ArticleCard
-                    title="Designing beyond the system: Going custom with purpose"
-                    subtitle="How custom solutions uplift products, evolve design systems and save money."
-                    link="https://medium.com/design-systems-collective/designing-beyond-the-system-going-custom-with-purpose-6623a08d49b7"
-                    image={custom}
-                  />
+                  <Stack space="small">
+                    <HeroCard
+                      featured={true}
+                      size="large"
+                      title="From components to consistency: Building our design
+                            system pattern library"
+                      subtitle="Establishing scalable solutions for recurring design
+                            problems across Seek's products."
+                      link="https://www.designsystemscollective.com/from-components-to-consistency-building-our-design-system-pattern-library-5be3e6b761ce"
+                      image="https://cherylpaulsen.com/images/casestudy01_cover.png"
+                    />
+                    <Columns space="small" collapseBelow="tablet">
+                      <Column>
+                        <HeroCard
+                          size="standard"
+                          title="From components to consistency: Building our design
+                            system pattern library"
+                          subtitle="Establishing scalable solutions for recurring design
+                            problems across Seek's products."
+                          link="https://www.designsystemscollective.com/from-components-to-consistency-building-our-design-system-pattern-library-5be3e6b761ce"
+                          image="https://cherylpaulsen.com/images/casestudy01_cover.png"
+                        />
+                      </Column>
+                      <Column>
+                        <HeroCard
+                          size="standard"
+                          title="From components to consistency: Building our design
+                            system pattern library"
+                          subtitle="Establishing scalable solutions for recurring design
+                            problems across Seek's products."
+                          link="https://www.designsystemscollective.com/from-components-to-consistency-building-our-design-system-pattern-library-5be3e6b761ce"
+                          image="https://cherylpaulsen.com/images/casestudy01_cover.png"
+                        />
+                      </Column>
+                    </Columns>
+                  </Stack>
                 </Column>
                 <Column>
-                  <ArticleCard
-                    title="With great persuasion comes great responsibility: Ethics in design"
-                    subtitle="Practical frameworks to ensure ethical and responsible product design."
-                    link="https://medium.com/p/adedcbe1bb66"
-                    image={ethics}
-                  />
+                  <Stack space="small">
+                    <Columns space="small" collapseBelow="tablet">
+                      <Column>
+                        <HeroCard
+                          size="standard"
+                          title="From components to consistency: Building our design
+                            system pattern library"
+                          subtitle="Establishing scalable solutions for recurring design
+                            problems across Seek's products."
+                          link="https://www.designsystemscollective.com/from-components-to-consistency-building-our-design-system-pattern-library-5be3e6b761ce"
+                          image="https://cherylpaulsen.com/images/casestudy01_cover.png"
+                        />
+                      </Column>
+                      <Column>
+                        <HeroCard
+                          size="standard"
+                          title="From components to consistency: Building our design
+                            system pattern library"
+                          subtitle="Establishing scalable solutions for recurring design
+                            problems across Seek's products."
+                          link="https://www.designsystemscollective.com/from-components-to-consistency-building-our-design-system-pattern-library-5be3e6b761ce"
+                          image="https://cherylpaulsen.com/images/casestudy01_cover.png"
+                        />
+                      </Column>
+                    </Columns>
+                    <HeroCard
+                      featured={true}
+                      size="large"
+                      title="Driving a product experience across multiple integrations to increase adoption"
+                      subtitle="Elevating the quality and consistency of experience across third party integrations."
+                      link="https://medium.com/@cheryl.paulsen/product-experience-across-integrations-32d925d339b2"
+                      image="https://miro.medium.com/v2/resize:fit:720/format:webp/1*8NP9r_LYr2SZ8nOYzBM1yg.png"
+                    />
+                  </Stack>
                 </Column>
               </Columns>
-            </PageBlock>
-            <PageBlock width="large">
-              <Stack space="xxlarge">
-                <Heading level="3" align="center">
-                  Other projects
-                </Heading>
-                <Columns space="large" collapseBelow="tablet">
-                  <Column>
-                    <ArticleCard
-                      title="Designing beyond the system: Going custom with purpose"
-                      subtitle="How custom solutions uplift products, evolve design systems and save money."
-                      link="https://medium.com/design-systems-collective/designing-beyond-the-system-going-custom-with-purpose-6623a08d49b7"
-                      image={custom}
-                    />
-                  </Column>
-                  <Column>
-                    <ArticleCard
-                      title="With great persuasion comes great responsibility: Ethics in design"
-                      subtitle="Practical frameworks to ensure ethical and responsible product design."
-                      link="https://medium.com/p/adedcbe1bb66"
-                      image={ethics}
-                    />
-                  </Column>
-                  <Column>
-                    <ArticleCard
-                      title="Choosing the right user research method for your project"
-                      subtitle="How to set your research up for success by choosing the best method for the best outcome."
-                      link="https://medium.com/p/3c7adace3bb9"
-                      image={research}
-                    />
-                  </Column>
-                </Columns>
-              </Stack>
             </PageBlock>
           </Stack>
         </Section>
