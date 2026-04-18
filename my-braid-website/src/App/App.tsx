@@ -6,15 +6,12 @@ import {
   Text,
   Card,
   Page,
-  Button,
-  Alert,
   PageBlock,
   Columns,
   Column,
   ContentBlock,
   TextLink,
   Box,
-  Bleed,
   Tiles,
   IconRocket,
   IconDocument,
@@ -29,7 +26,6 @@ import {
   Link,
 } from 'braid-design-system';
 import seekJobs from 'braid-design-system/themes/seekJobs';
-import { NextSteps } from './NextSteps';
 import { Section } from './Section';
 import chez from '../images/Chez-SM.png';
 import ethics from '../images/articleCover_ethics.png';
@@ -40,7 +36,7 @@ import { HeroCard } from './HeroCard';
 import { SkillTile } from './SkillTile';
 
 export default function App() {
-  const pageWidth = 'medium';
+  const pageWidth = 'large';
 
   return (
     <BraidProvider theme={seekJobs}>
@@ -106,33 +102,35 @@ export default function App() {
         <Section tone="brandAccent" title="About me">
           <Stack space="xxlarge">
             <PageBlock width={pageWidth}>
-              <Stack space="large">
-                <Text size="large">
-                  I'm a Product Designer with over 15 years experience and a
-                  bachelor&rsquo;s degree in Psychology. I love applying my
-                  behavioural knowledge to designs so I can help create products
-                  people love.
-                </Text>
-                <Text size="large">
-                  Working in design systems, I collaborate with engineers to
-                  implement and maintain components, patterns and usage
-                  guidelines that ensure best practice. I create code-based
-                  prototypes combining my design expertise with technical
-                  execution.
-                </Text>
-                <Text size="large">
-                  Check out a few of my recent blog articles below, or see more
-                  on{' '}
-                  <TextLink
-                    href="https://medium.com/@cheryl.paulsen"
-                    target="_blank"
-                    weight="weak"
-                  >
-                    Medium
-                  </TextLink>
-                  .
-                </Text>
-              </Stack>
+              <ContentBlock width="medium" align="left">
+                <Stack space="large">
+                  <Text size="large">
+                    I'm a Product Designer with over 15 years experience and a
+                    bachelor&rsquo;s degree in Psychology. I love applying my
+                    behavioural knowledge to designs so I can help create
+                    products people love.
+                  </Text>
+                  <Text size="large">
+                    Working in design systems, I collaborate with engineers to
+                    implement and maintain components, patterns and usage
+                    guidelines that ensure best practice. I create code-based
+                    prototypes combining my design expertise with technical
+                    execution.
+                  </Text>
+                  <Text size="large">
+                    Check out a few of my recent blog articles below, or see
+                    more on{' '}
+                    <TextLink
+                      href="https://medium.com/@cheryl.paulsen"
+                      target="_blank"
+                      weight="weak"
+                    >
+                      Medium
+                    </TextLink>
+                    .
+                  </Text>
+                </Stack>
+              </ContentBlock>
             </PageBlock>
 
             <PageBlock width="large">
@@ -160,7 +158,7 @@ export default function App() {
           </Stack>
         </Section>
 
-        <Section tone="surface" title="Case studies">
+        <Section tone="surface" title="Projects">
           <Stack space="xxxlarge">
             <PageBlock width="large">
               <Columns space="small" collapseBelow="tablet">
