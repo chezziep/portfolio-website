@@ -14,7 +14,7 @@ export function Section({ tone, title, children }: SectionProps) {
       background={tone}
     >
       <PageBlock width="large">
-        <Stack space="large">
+        <Stack space="xxlarge">
           {title ? (
             <Heading level="1" weight="weak">
               {title}

@@ -2,7 +2,7 @@ import { Box, Heading, Text, Stack, Link, Badge } from 'braid-design-system';
 
 interface HeroCardProps {
   title: string;
-  subtitle: string;
+  subtitle?: string;
   link: string;
   image: string;
   size?: 'standard' | 'large';
@@ -72,7 +72,7 @@ export function HeroCard({
           <Stack space="small">
             {featured ? <Badge tone="promote">Case study</Badge> : null}
             <Heading level={headingLevel}>{title}</Heading>
-            <Text size={textSize}>{subtitle}</Text>
+            {subtitle ? <Text size={textSize}>{subtitle}</Text> : null}
           </Stack>
         </Box>
       </Box>
