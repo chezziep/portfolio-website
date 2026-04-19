@@ -69,9 +69,7 @@ export default function App() {
             alignY="center"
           >
             <Column width="1/2">
-              <Stack space="none">
-                <img src={chez} alt="Chez" width={450} height={450} />
-              </Stack>
+              <img src={chez} alt="Chez" width={450} height={450} />
             </Column>
             <Column>
               <ContentBlock width="small" align="left">
@@ -279,28 +277,28 @@ export default function App() {
         </Section>
 
         <Section tone="surface" title="Let's be friends :)">
-          <ContentBlock width="small">
+          <ContentBlock width="small" align="left">
             <Tiles space="xxsmall" columns={{ mobile: 1, tablet: 4 }}>
               <Link
                 href="https://www.linkedin.com/in/cherylpaulsen/"
                 target="_blank"
               >
-                <Heading component="div" level="1" align="center">
+                <Heading component="div" level="1">
                   <IconSocialLinkedIn />
                 </Heading>
               </Link>
               <Link href="https://medium.com/@cheryl.paulsen" target="_blank">
-                <Heading component="div" level="1" align="center">
+                <Heading component="div" level="1">
                   <IconSocialMedium />
                 </Heading>
               </Link>
               <Link href="https://x.com/Cheryl_Paulsen" target="_blank">
-                <Heading component="div" level="1" align="center">
+                <Heading component="div" level="1">
                   <IconSocialX />
                 </Heading>
               </Link>
               <Link href="https://github.com/cherylpaulsen" target="_blank">
-                <Heading component="div" level="1" align="center">
+                <Heading component="div" level="1">
                   <IconSocialGitHub />
                 </Heading>
               </Link>
