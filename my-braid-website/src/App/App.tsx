@@ -51,7 +51,17 @@ export default function App() {
           alignY="center"
         >
           <Column width="1/2">
-            <img src={chez} alt="Chez" width={450} height={450} />
+            <Box
+              borderRadius="full"
+              boxShadow="large"
+              overflow="hidden"
+              style={{
+                width: '450px',
+                height: '450px',
+              }}
+            >
+              <img src={chez} alt="Chez" width="450px" height="450px" />
+            </Box>
           </Column>
           <Column>
             <Stack space="xxlarge">
@@ -84,27 +94,25 @@ export default function App() {
             <Column width="1/2">
               <Stack space="large">
                 <Text size="large">
-                  I'm a Product Designer with over 15 years experience and a
-                  bachelor&rsquo;s degree in Psychology. I love applying my
+                  I&rsquo;m a Product Designer with over 15 years experience and
+                  a bachelor&rsquo;s degree in Psychology. I love applying my
                   behavioural knowledge to designs so I can help create products
-                  people love.
-                </Text>
-                <Text size="large">
-                  Working in design systems, I collaborate with engineers to
-                  implement and maintain components, patterns and usage
-                  guidelines that ensure best practice.
+                  people love. Working in design systems, I collaborate with
+                  engineers to implement and maintain components, patterns and
+                  usage guidelines that ensure best practice.
                 </Text>
               </Stack>
             </Column>
             <Column width="1/2">
               <Stack space="large">
                 <Text size="large">
-                  I create code-based prototypes combining my design expertise
-                  with technical execution.
-                </Text>
-                <Text size="large">
-                  Check out a few of my recent blog articles below, or see more
-                  on{' '}
+                  I have front-end development experience spanning HTML, CSS and
+                  JavaScript, as well as working knowledge in React, Git/GitHub
+                  and Cursor IDE. I create code-based prototypes combining my
+                  design expertise with technical execution. I like to share my
+                  learnings and experiences with other designers in the
+                  community. Check out a few of my recent blog articles below,
+                  or see more on{' '}
                   <TextLink
                     href="https://medium.com/@cheryl.paulsen"
                     target="_blank"
