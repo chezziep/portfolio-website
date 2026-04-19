@@ -22,7 +22,6 @@ import {
   IconSocialMedium,
   IconSocialGitHub,
   IconLink,
-  IconHeart,
 } from 'braid-design-system';
 import seekJobs from 'braid-design-system/themes/seekJobs';
 import { Section } from './Section';
@@ -168,23 +167,18 @@ export default function App() {
                   <Column>
                     <HeroCard
                       size="standard"
-                      title="From components to consistency: Building our design
-                            system pattern library"
-                      subtitle="Establishing scalable solutions for recurring design
-                            problems across Seek's products."
-                      link="https://www.designsystemscollective.com/from-components-to-consistency-building-our-design-system-pattern-library-5be3e6b761ce"
-                      image="https://cherylpaulsen.com/images/casestudy01_cover.png"
+                      featured={true}
+                      title="Supporting a pricing model transformation"
+                      link="https://medium.com/@cheryl.paulsen/seek-pricing-transformation-ddef8f756b3"
+                      image="https://miro.medium.com/v2/resize:fit:720/format:webp/1*vuhdHaCoEqng2wabjVm1-g.jpeg"
                     />
                   </Column>
                   <Column>
                     <HeroCard
                       size="standard"
-                      title="From components to consistency: Building our design
-                            system pattern library"
-                      subtitle="Establishing scalable solutions for recurring design
-                            problems across Seek's products."
-                      link="https://www.designsystemscollective.com/from-components-to-consistency-building-our-design-system-pattern-library-5be3e6b761ce"
-                      image="https://cherylpaulsen.com/images/casestudy01_cover.png"
+                      title="Creating a UX research resource for the design community"
+                      link="https://medium.com/@cheryl.paulsen/rubik-a-ux-resource-for-the-design-community-cf477ead6de6"
+                      image="https://cherylpaulsen.com/images/casestudy03_cover.png"
                     />
                   </Column>
                 </Columns>
@@ -192,28 +186,17 @@ export default function App() {
             </Column>
             <Column>
               <Stack space="small">
-                <Columns space="small" collapseBelow="tablet">
+                <Columns space="none" collapseBelow="tablet">
                   <Column>
                     <HeroCard
                       size="standard"
-                      title="From components to consistency: Building our design
-                            system pattern library"
-                      subtitle="Establishing scalable solutions for recurring design
-                            problems across Seek's products."
-                      link="https://www.designsystemscollective.com/from-components-to-consistency-building-our-design-system-pattern-library-5be3e6b761ce"
-                      image="https://cherylpaulsen.com/images/casestudy01_cover.png"
+                      title="Designing a service blueprint for a multi-channel experience"
+                      link="https://medium.com/@cheryl.paulsen/anz-digital-transformation-service-design-cf167827e58b"
+                      image="https://miro.medium.com/v2/resize:fit:720/format:webp/1*BRG7l1Wz0qqN7cxRl8jH5g.png"
                     />
                   </Column>
-                  <Column>
-                    <HeroCard
-                      size="standard"
-                      title="From components to consistency: Building our design
-                            system pattern library"
-                      subtitle="Establishing scalable solutions for recurring design
-                            problems across Seek's products."
-                      link="https://www.designsystemscollective.com/from-components-to-consistency-building-our-design-system-pattern-library-5be3e6b761ce"
-                      image="https://cherylpaulsen.com/images/casestudy01_cover.png"
-                    />
+                  <Column width="content">
+                    <Box />
                   </Column>
                 </Columns>
                 <HeroCard
@@ -312,7 +295,7 @@ export default function App() {
       </Section>
 
       <Box
-        background="brand"
+        background="neutral"
         paddingY="xlarge"
         paddingX={{ mobile: 'small', tablet: 'gutter' }}
       >
