@@ -52,7 +52,6 @@ export default function App() {
           <Column width="1/2">
             <Box
               borderRadius="full"
-              boxShadow="large"
               overflow="hidden"
               style={{
                 width: '450px',
