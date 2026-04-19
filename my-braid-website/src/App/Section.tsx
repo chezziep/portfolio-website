@@ -1,15 +1,5 @@
 import type { ReactNode } from 'react';
-import {
-  Box,
-  Heading,
-  Text,
-  Strong,
-  ContentBlock,
-  TextLink,
-  Stack,
-  List,
-  Divider,
-} from 'braid-design-system';
+import { Box, Heading, Stack, PageBlock } from 'braid-design-system';
 
 interface SectionProps {
   tone: 'brandAccent' | 'surface';
@@ -23,14 +13,16 @@ export function Section({ tone, title, children }: SectionProps) {
       paddingX={{ mobile: 'small', tablet: 'gutter' }}
       background={tone}
     >
-      <Stack space="xxlarge">
-        {title ? (
-          <Heading level="1" weight="weak" align="center">
-            {title}
-          </Heading>
-        ) : null}
-        <Box>{children}</Box>
-      </Stack>
+      <PageBlock width="large">
+        <Stack space="large">
+          {title ? (
+            <Heading level="1" weight="weak">
+              {title}
+            </Heading>
+          ) : null}
+          <Box>{children}</Box>
+        </Stack>
+      </PageBlock>
     </Box>
   );
 }

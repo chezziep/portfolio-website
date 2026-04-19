@@ -62,47 +62,43 @@ export default function App() {
         </Card>
 
         <Section tone="surface">
-          <PageBlock width={pageWidth}>
-            <Columns
-              space="large"
-              collapseBelow="tablet"
-              reverse
-              alignY="center"
-            >
-              <Column width="content">
-                <Stack align="center" space="none">
-                  <img src={chez} alt="Chez" width={450} height={450} />
+          <Columns space="large" collapseBelow="tablet" reverse alignY="center">
+            <Column width="content">
+              <Stack align="center" space="none">
+                <img src={chez} alt="Chez" width={450} height={450} />
+              </Stack>
+            </Column>
+            <Column>
+              <ContentBlock width="small" align="left">
+                <Stack space="large">
+                  <Heading level="1" weight="weak">
+                    Hi, I'm Chez 👋
+                  </Heading>
+                  <Text size="large">
+                    I'm a Principal Product Designer @{' '}
+                    <TextLink
+                      href="https://seek.com.au"
+                      target="_blank"
+                      weight="weak"
+                    >
+                      Seek
+                    </TextLink>
+                    . I bridge design and technology to build design systems
+                    that create great products.
+                  </Text>
                 </Stack>
-              </Column>
-              <Column>
-                <ContentBlock width="small" align="left">
-                  <Stack space="large">
-                    <Heading level="1" weight="weak">
-                      Hi, I'm Chez 👋
-                    </Heading>
-                    <Text size="large">
-                      I'm a Principal Product Designer @{' '}
-                      <TextLink
-                        href="https://seek.com.au"
-                        target="_blank"
-                        weight="weak"
-                      >
-                        Seek
-                      </TextLink>
-                      . I bridge design and technology to build design systems
-                      that create great products.
-                    </Text>
-                  </Stack>
-                </ContentBlock>
-              </Column>
-            </Columns>
-          </PageBlock>
+              </ContentBlock>
+            </Column>
+          </Columns>
         </Section>
 
         <Section tone="brandAccent" title="About me">
           <Stack space="xxlarge">
-            <PageBlock width={pageWidth}>
-              <ContentBlock width="medium" align="left">
+            <Columns
+              space={{ mobile: 'large', desktop: 'xxlarge' }}
+              collapseBelow="desktop"
+            >
+              <Column width="1/2">
                 <Stack space="large">
                   <Text size="large">
                     I'm a Product Designer with over 15 years experience and a
@@ -113,9 +109,15 @@ export default function App() {
                   <Text size="large">
                     Working in design systems, I collaborate with engineers to
                     implement and maintain components, patterns and usage
-                    guidelines that ensure best practice. I create code-based
-                    prototypes combining my design expertise with technical
-                    execution.
+                    guidelines that ensure best practice.
+                  </Text>
+                </Stack>
+              </Column>
+              <Column width="1/2">
+                <Stack space="large">
+                  <Text size="large">
+                    I create code-based prototypes combining my design expertise
+                    with technical execution.
                   </Text>
                   <Text size="large">
                     Check out a few of my recent blog articles below, or see
@@ -130,119 +132,115 @@ export default function App() {
                     .
                   </Text>
                 </Stack>
-              </ContentBlock>
-            </PageBlock>
+              </Column>
+            </Columns>
 
-            <PageBlock width="large">
-              <Tiles space="small" columns={{ mobile: 1, desktop: 3 }}>
-                <ArticleCard
-                  title="Designing beyond the system: Going custom with purpose"
-                  subtitle="How custom solutions uplift products, evolve design systems and save money."
-                  link="https://medium.com/design-systems-collective/designing-beyond-the-system-going-custom-with-purpose-6623a08d49b7"
-                  image={custom}
-                />
-                <ArticleCard
-                  title="With great persuasion comes great responsibility: Ethics in design"
-                  subtitle="Practical frameworks to ensure ethical and responsible product design."
-                  link="https://medium.com/p/adedcbe1bb66"
-                  image={ethics}
-                />
-                <ArticleCard
-                  title="Choosing the right user research method for your project"
-                  subtitle="How to set your research up for success by choosing the best method for the best outcome."
-                  link="https://medium.com/p/3c7adace3bb9"
-                  image={research}
-                />
-              </Tiles>
-            </PageBlock>
+            <Tiles space="small" columns={{ mobile: 1, desktop: 3 }}>
+              <ArticleCard
+                title="Designing beyond the system: Going custom with purpose"
+                subtitle="How custom solutions uplift products, evolve design systems and save money."
+                link="https://medium.com/design-systems-collective/designing-beyond-the-system-going-custom-with-purpose-6623a08d49b7"
+                image={custom}
+              />
+              <ArticleCard
+                title="With great persuasion comes great responsibility: Ethics in design"
+                subtitle="Practical frameworks to ensure ethical and responsible product design."
+                link="https://medium.com/p/adedcbe1bb66"
+                image={ethics}
+              />
+              <ArticleCard
+                title="Choosing the right user research method for your project"
+                subtitle="How to set your research up for success by choosing the best method for the best outcome."
+                link="https://medium.com/p/3c7adace3bb9"
+                image={research}
+              />
+            </Tiles>
           </Stack>
         </Section>
 
         <Section tone="surface" title="Projects">
           <Stack space="xxxlarge">
-            <PageBlock width="large">
-              <Columns space="small" collapseBelow="tablet">
-                <Column>
-                  <Stack space="small">
-                    <HeroCard
-                      featured={true}
-                      size="large"
-                      title="From components to consistency: Building our design
+            <Columns space="small" collapseBelow="tablet">
+              <Column>
+                <Stack space="small">
+                  <HeroCard
+                    featured={true}
+                    size="large"
+                    title="From components to consistency: Building our design
                             system pattern library"
-                      subtitle="Establishing scalable solutions for recurring design
+                    subtitle="Establishing scalable solutions for recurring design
                             problems across Seek's products."
-                      link="https://www.designsystemscollective.com/from-components-to-consistency-building-our-design-system-pattern-library-5be3e6b761ce"
-                      image="https://cherylpaulsen.com/images/casestudy01_cover.png"
-                    />
-                    <Columns space="small" collapseBelow="tablet">
-                      <Column>
-                        <HeroCard
-                          size="standard"
-                          title="From components to consistency: Building our design
+                    link="https://www.designsystemscollective.com/from-components-to-consistency-building-our-design-system-pattern-library-5be3e6b761ce"
+                    image="https://cherylpaulsen.com/images/casestudy01_cover.png"
+                  />
+                  <Columns space="small" collapseBelow="tablet">
+                    <Column>
+                      <HeroCard
+                        size="standard"
+                        title="From components to consistency: Building our design
                             system pattern library"
-                          subtitle="Establishing scalable solutions for recurring design
+                        subtitle="Establishing scalable solutions for recurring design
                             problems across Seek's products."
-                          link="https://www.designsystemscollective.com/from-components-to-consistency-building-our-design-system-pattern-library-5be3e6b761ce"
-                          image="https://cherylpaulsen.com/images/casestudy01_cover.png"
-                        />
-                      </Column>
-                      <Column>
-                        <HeroCard
-                          size="standard"
-                          title="From components to consistency: Building our design
+                        link="https://www.designsystemscollective.com/from-components-to-consistency-building-our-design-system-pattern-library-5be3e6b761ce"
+                        image="https://cherylpaulsen.com/images/casestudy01_cover.png"
+                      />
+                    </Column>
+                    <Column>
+                      <HeroCard
+                        size="standard"
+                        title="From components to consistency: Building our design
                             system pattern library"
-                          subtitle="Establishing scalable solutions for recurring design
+                        subtitle="Establishing scalable solutions for recurring design
                             problems across Seek's products."
-                          link="https://www.designsystemscollective.com/from-components-to-consistency-building-our-design-system-pattern-library-5be3e6b761ce"
-                          image="https://cherylpaulsen.com/images/casestudy01_cover.png"
-                        />
-                      </Column>
-                    </Columns>
-                  </Stack>
-                </Column>
-                <Column>
-                  <Stack space="small">
-                    <Columns space="small" collapseBelow="tablet">
-                      <Column>
-                        <HeroCard
-                          size="standard"
-                          title="From components to consistency: Building our design
+                        link="https://www.designsystemscollective.com/from-components-to-consistency-building-our-design-system-pattern-library-5be3e6b761ce"
+                        image="https://cherylpaulsen.com/images/casestudy01_cover.png"
+                      />
+                    </Column>
+                  </Columns>
+                </Stack>
+              </Column>
+              <Column>
+                <Stack space="small">
+                  <Columns space="small" collapseBelow="tablet">
+                    <Column>
+                      <HeroCard
+                        size="standard"
+                        title="From components to consistency: Building our design
                             system pattern library"
-                          subtitle="Establishing scalable solutions for recurring design
+                        subtitle="Establishing scalable solutions for recurring design
                             problems across Seek's products."
-                          link="https://www.designsystemscollective.com/from-components-to-consistency-building-our-design-system-pattern-library-5be3e6b761ce"
-                          image="https://cherylpaulsen.com/images/casestudy01_cover.png"
-                        />
-                      </Column>
-                      <Column>
-                        <HeroCard
-                          size="standard"
-                          title="From components to consistency: Building our design
+                        link="https://www.designsystemscollective.com/from-components-to-consistency-building-our-design-system-pattern-library-5be3e6b761ce"
+                        image="https://cherylpaulsen.com/images/casestudy01_cover.png"
+                      />
+                    </Column>
+                    <Column>
+                      <HeroCard
+                        size="standard"
+                        title="From components to consistency: Building our design
                             system pattern library"
-                          subtitle="Establishing scalable solutions for recurring design
+                        subtitle="Establishing scalable solutions for recurring design
                             problems across Seek's products."
-                          link="https://www.designsystemscollective.com/from-components-to-consistency-building-our-design-system-pattern-library-5be3e6b761ce"
-                          image="https://cherylpaulsen.com/images/casestudy01_cover.png"
-                        />
-                      </Column>
-                    </Columns>
-                    <HeroCard
-                      featured={true}
-                      size="large"
-                      title="Driving a product experience across multiple integrations to increase adoption"
-                      subtitle="Elevating the quality and consistency of experience across third party integrations."
-                      link="https://medium.com/@cheryl.paulsen/product-experience-across-integrations-32d925d339b2"
-                      image="https://miro.medium.com/v2/resize:fit:720/format:webp/1*8NP9r_LYr2SZ8nOYzBM1yg.png"
-                    />
-                  </Stack>
-                </Column>
-              </Columns>
-            </PageBlock>
+                        link="https://www.designsystemscollective.com/from-components-to-consistency-building-our-design-system-pattern-library-5be3e6b761ce"
+                        image="https://cherylpaulsen.com/images/casestudy01_cover.png"
+                      />
+                    </Column>
+                  </Columns>
+                  <HeroCard
+                    featured={true}
+                    size="large"
+                    title="Driving a product experience across multiple integrations to increase adoption"
+                    subtitle="Elevating the quality and consistency of experience across third party integrations."
+                    link="https://medium.com/@cheryl.paulsen/product-experience-across-integrations-32d925d339b2"
+                    image="https://miro.medium.com/v2/resize:fit:720/format:webp/1*8NP9r_LYr2SZ8nOYzBM1yg.png"
+                  />
+                </Stack>
+              </Column>
+            </Columns>
           </Stack>
         </Section>
 
         <Section tone="brandAccent" title="Skills">
-          <PageBlock width={pageWidth}>
+          <ContentBlock width="medium" align="left">
             <Tiles
               space="xxxlarge"
               columns={{ mobile: 1, tablet: 2, desktop: 3 }}
@@ -272,11 +270,11 @@ export default function App() {
                 icon={<IconImage size="fill" />}
               />
             </Tiles>
-          </PageBlock>
+          </ContentBlock>
         </Section>
 
         <Section tone="surface" title="Let's be friends :)">
-          <PageBlock width="small">
+          <ContentBlock width="small">
             <Tiles space="xxsmall" columns={{ mobile: 1, tablet: 4 }}>
               <Link
                 href="https://www.linkedin.com/in/cherylpaulsen/"
@@ -302,7 +300,7 @@ export default function App() {
                 </Heading>
               </Link>
             </Tiles>
-          </PageBlock>
+          </ContentBlock>
         </Section>
       </Page>
     </BraidProvider>

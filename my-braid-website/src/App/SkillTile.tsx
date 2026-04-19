@@ -24,7 +24,7 @@ interface SkillTileProps {
 
 export function SkillTile({ title, icon }: SkillTileProps) {
   return (
-    <Stack space="medium" align="center">
+    <Stack space="medium">
       <Box
         style={{
           height: 40,
