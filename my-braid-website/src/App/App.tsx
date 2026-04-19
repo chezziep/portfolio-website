@@ -5,11 +5,9 @@ import {
   Heading,
   Text,
   Card,
-  Page,
   PageBlock,
   Columns,
   Column,
-  ContentBlock,
   TextLink,
   Box,
   Tiles,
@@ -24,6 +22,7 @@ import {
   IconSocialMedium,
   IconSocialGitHub,
   IconLink,
+  IconHeart,
 } from 'braid-design-system';
 import seekJobs from 'braid-design-system/themes/seekJobs';
 import { Section } from './Section';
@@ -44,7 +43,7 @@ export default function App() {
         <Text size="large">Navigation will go here...</Text>
       </Card>
 
-      <Section tone="surface">
+      <Section tone="brandAccent">
         <Columns
           space={{ mobile: 'large', desktop: 'xxlarge' }}
           collapseBelow="desktop"
@@ -55,30 +54,28 @@ export default function App() {
             <img src={chez} alt="Chez" width={450} height={450} />
           </Column>
           <Column>
-            <ContentBlock width="small" align="left">
-              <Stack space="large">
-                <Heading level="1" weight="weak">
-                  Hi, I'm Chez 👋
-                </Heading>
-                <Text size="large">
-                  I'm a Principal Product Designer @{' '}
-                  <TextLink
-                    href="https://seek.com.au"
-                    target="_blank"
-                    weight="weak"
-                  >
-                    Seek
-                  </TextLink>
-                  . I bridge design and technology to build design systems that
-                  create great products.
-                </Text>
-              </Stack>
-            </ContentBlock>
+            <Stack space="xxlarge">
+              <Heading level="1" weight="weak">
+                Hi, I'm Chez 👋
+              </Heading>
+              <Text size="large">
+                I'm a Principal Product Designer @{' '}
+                <TextLink
+                  href="https://seek.com.au"
+                  target="_blank"
+                  weight="weak"
+                >
+                  Seek
+                </TextLink>
+                . I bridge design and technology to build design systems that
+                create great products.
+              </Text>
+            </Stack>
           </Column>
         </Columns>
       </Section>
 
-      <Section tone="brandAccent" title="About me">
+      <Section tone="surface" title="About me">
         <Stack space="xxlarge">
           <Columns
             space={{ mobile: 'large', desktop: 'xxlarge' }}
@@ -144,7 +141,7 @@ export default function App() {
         </Stack>
       </Section>
 
-      <Section tone="surface" title="Projects">
+      <Section tone="brandAccent" title="Projects">
         <Stack space="xxxlarge">
           <Columns space="small" collapseBelow="tablet">
             <Column>
@@ -225,8 +222,8 @@ export default function App() {
         </Stack>
       </Section>
 
-      <Section tone="brandAccent" title="Skills">
-        <Tiles space="xxxlarge" columns={{ mobile: 1, tablet: 2, desktop: 4 }}>
+      <Section tone="surface" title="Skills">
+        <Tiles space="xxxlarge" columns={{ mobile: 1, tablet: 2, desktop: 3 }}>
           <SkillTile
             title="Systems implementation"
             icon={<IconRocket size="fill" />}
@@ -251,7 +248,7 @@ export default function App() {
         </Tiles>
       </Section>
 
-      <Section tone="surface" title="Let's be friends :)">
+      <Section tone="brandAccent" title="Let's be friends">
         <Stack space="large">
           <Heading level="4" weight="weak">
             <TextLink
@@ -306,16 +303,22 @@ export default function App() {
         </Stack>
       </Section>
 
-      <Box background="neutral" padding="medium">
+      <Box
+        background="brand"
+        paddingY="xlarge"
+        paddingX={{ mobile: 'small', tablet: 'gutter' }}
+      >
         <PageBlock width={pageWidth}>
-          <Text size="xsmall" tone="secondary">
-            Made with the{' '}
+          <Text size="standard">
+            Made with{' '}
             <TextLink
               href="https://seek-oss.github.io/braid-design-system"
               target="_blank"
+              weight="weak"
             >
-              Braid Design System
-            </TextLink>
+              Braid design system
+            </TextLink>{' '}
+            ❤️
           </Text>
         </PageBlock>
       </Box>
