@@ -62,9 +62,14 @@ export default function App() {
         </Card>
 
         <Section tone="surface">
-          <Columns space="large" collapseBelow="tablet" reverse alignY="center">
-            <Column width="content">
-              <Stack align="center" space="none">
+          <Columns
+            space={{ mobile: 'large', desktop: 'xxlarge' }}
+            collapseBelow="desktop"
+            reverse
+            alignY="center"
+          >
+            <Column width="1/2">
+              <Stack space="none">
                 <img src={chez} alt="Chez" width={450} height={450} />
               </Stack>
             </Column>
