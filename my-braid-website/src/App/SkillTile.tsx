@@ -1,21 +1,5 @@
 import type { ReactNode } from 'react';
-import {
-  Box,
-  Heading,
-  Text,
-  Strong,
-  ContentBlock,
-  TextLink,
-  Stack,
-  List,
-  Divider,
-  Card,
-  Bleed,
-  Actions,
-  Button,
-  ButtonLink,
-  IconRocket,
-} from 'braid-design-system';
+import { Box, Heading, Stack } from 'braid-design-system';
 
 interface SkillTileProps {
   title: string;
