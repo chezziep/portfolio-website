@@ -38,12 +38,12 @@ export default function App() {
   const pageWidth = 'large';
   const navItems = [
     { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About me' },
+    { id: 'about', label: 'About' },
     { id: 'projects', label: 'Projects' },
     { id: 'skills', label: 'Skills' },
-    { id: 'contact', label: "Let's be friends" },
+    { id: 'contact', label: 'Contact' },
   ] as const;
-  const navOffset = 88;
+  const navOffset = 70;
   const [activeSection, setActiveSection] =
     useState<(typeof navItems)[number]['id']>('home');
   const getScrollBehavior = () =>

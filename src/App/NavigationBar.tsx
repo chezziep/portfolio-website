@@ -3,7 +3,6 @@ import {
   Button,
   Hidden,
   Actions,
-  Inline,
   MenuItem,
   OverflowMenu,
   PageBlock,
@@ -24,7 +23,7 @@ export function NavigationBar<TSectionId extends string>({
 }: NavigationBarProps<TSectionId>) {
   return (
     <Box
-      background="brandAccent"
+      background="neutral"
       paddingY="small"
       position="sticky"
       top={0}
@@ -37,7 +36,7 @@ export function NavigationBar<TSectionId extends string>({
               <Button
                 key={id}
                 size="small"
-                variant={activeSection === id ? 'solid' : 'soft'}
+                variant={activeSection === id ? 'ghost' : 'transparent'}
                 tone="neutral"
                 aria-pressed={activeSection === id}
                 onClick={() => onNavigate(id)}
