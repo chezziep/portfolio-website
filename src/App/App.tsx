@@ -22,15 +22,10 @@ import {
   IconSocialMedium,
   IconSocialGitHub,
   IconLink,
-  Hidden,
-  Inline,
-  Button,
-  OverflowMenu,
-  MenuItem,
-  Spread,
 } from 'braid-design-system';
 import seekJobs from 'braid-design-system/themes/seekJobs';
 import { Section } from './Section';
+import { NavigationBar } from './NavigationBar';
 import chez from '../images/Chez-SM.png';
 import ethics from '../images/articleCover_ethics.png';
 import research from '../images/articleCover_research.png';
@@ -121,48 +116,12 @@ export default function App() {
 
   return (
     <BraidProvider theme={seekJobs}>
-      <Box
-        background="brandAccent"
-        paddingY="small"
-        position="sticky"
-        top={0}
-        style={{ zIndex: 250 }}
-      >
-        <PageBlock width={pageWidth}>
-          <Spread space="small" alignY="center">
-            <Hidden below="desktop">
-              <Inline space="small" align="center">
-                {navItems.map(({ id, label }) => (
-                  <Button
-                    key={id}
-                    size="small"
-                    variant={activeSection === id ? 'solid' : 'soft'}
-                    tone="neutral"
-                    aria-pressed={activeSection === id}
-                    onClick={() => scrollToSection(id)}
-                  >
-                    {label}
-                  </Button>
-                ))}
-              </Inline>
-            </Hidden>
-            <Hidden above="tablet">
-              <OverflowMenu
-                label={
-                  navItems.find(({ id }) => id === activeSection)?.label ??
-                  'Menu'
-                }
-              >
-                {navItems.map(({ id, label }) => (
-                  <MenuItem key={id} onClick={() => scrollToSection(id)}>
-                    {label}
-                  </MenuItem>
-                ))}
-              </OverflowMenu>
-            </Hidden>
-          </Spread>
-        </PageBlock>
-      </Box>
+      <NavigationBar
+        navItems={navItems}
+        activeSection={activeSection}
+        onNavigate={scrollToSection}
+        pageWidth={pageWidth}
+      />
 
       <Section tone="brandAccent" id="home">
         <Columns
