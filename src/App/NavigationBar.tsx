@@ -23,7 +23,7 @@ export function NavigationBar<TSectionId extends string>({
 }: NavigationBarProps<TSectionId>) {
   return (
     <Box
-      background="neutral"
+      background="brandAccent"
       paddingY="small"
       position="sticky"
       top={0}
