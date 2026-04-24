@@ -1,40 +1,7 @@
-# my-braid-website
+# Hi, I'm Chez 👋
 
-This project is powered by [sku](https://github.com/seek-oss/sku), [braid](https://github.com/seek-oss/braid-design-system) and built with [React](https://facebook.github.io/react).
+I'm a Principal Product Designer at [Seek](https://www.seek.com.au/ "target='_blank'"). I bridge design and technology to build design systems that create great products.
 
-## Getting Started
+## About this project
 
-First of all, make sure you&#39;ve installed [npm](https://docs.npmjs.com/cli/configuring-npm/install).
-
-Then, install dependencies:
-
-```sh
-$ npm i
-```
-
-## Workflow
-
-Start a local development server:
-
-```sh
-$ npm run start
-```
-
-Run unit tests:
-
-```sh
-$ npm run test
-```
-
-Lint and format code:
-
-```sh
-$ npm run lint
-$ npm run format
-```
-
-Build assets for production:
-
-```sh
-$ npm run build
-```
+This is my portfolio website, powered by the Seek design system [Braid](https://github.com/seek-oss/braid-design-system "target='_blank'"). It's my personal side quest to get closer to code and build my understanding of JavaScript, React and Git. And what better way to learn than to do? So please enjoy my very first repo.
