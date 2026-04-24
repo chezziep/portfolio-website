@@ -5,13 +5,16 @@ interface SectionProps {
   tone: 'brandAccent' | 'surface';
   title?: string;
   children?: ReactNode;
+  id?: string;
 }
-export function Section({ tone, title, children }: SectionProps) {
+export function Section({ tone, title, children, id }: SectionProps) {
   return (
     <Box
+      id={id}
       paddingY="xxxlarge"
       paddingX={{ mobile: 'small', tablet: 'gutter' }}
       background={tone}
+      style={id ? { scrollMarginTop: '88px' } : undefined}
     >
       <PageBlock width="large">
         <Stack space="xxlarge">
