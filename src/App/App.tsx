@@ -5,7 +5,6 @@ import {
   Stack,
   Heading,
   Text,
-  Card,
   PageBlock,
   Columns,
   Column,
@@ -52,10 +51,14 @@ export default function App() {
   const navOffset = 88;
   const [activeSection, setActiveSection] =
     useState<(typeof navItems)[number]['id']>('home');
+  const getScrollBehavior = () =>
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      ? 'auto'
+      : 'smooth';
 
   const scrollToSection = (sectionId: (typeof navItems)[number]['id']) => {
     if (sectionId === 'home') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: getScrollBehavior() });
       setActiveSection('home');
       return;
     }
@@ -66,7 +69,7 @@ export default function App() {
     }
 
     const y = target.getBoundingClientRect().top + window.scrollY - navOffset;
-    window.scrollTo({ top: y, behavior: 'smooth' });
+    window.scrollTo({ top: y, behavior: getScrollBehavior() });
     setActiveSection(sectionId);
   };
 
@@ -82,15 +85,20 @@ export default function App() {
       }
 
       const currentScrollPosition = window.scrollY + navOffset + 1;
+      let nextActiveSection: (typeof navItems)[number]['id'] = 'home';
 
-      for (let index = sectionIds.length - 1; index >= 0; index -= 1) {
-        const section = document.getElementById(sectionIds[index]);
-        if (section && section.offsetTop <= currentScrollPosition) {
-          setActiveSection(sectionIds[index]);
-          break;
+      for (const sectionId of sectionIds) {
+        const section = document.getElementById(sectionId);
+        if (!section) {
+          continue;
+        }
+
+        if (section.offsetTop <= currentScrollPosition) {
+          nextActiveSection = sectionId;
         }
       }
 
+      setActiveSection(nextActiveSection);
       ticking = false;
     };
 
@@ -130,6 +138,7 @@ export default function App() {
                     size="small"
                     variant={activeSection === id ? 'solid' : 'soft'}
                     tone="neutral"
+                    aria-pressed={activeSection === id}
                     onClick={() => scrollToSection(id)}
                   >
                     {label}
