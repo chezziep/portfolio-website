@@ -228,7 +228,7 @@ export default function App() {
         </Stack>
       </Section>
 
-      <Section tone="brandAccent" title="Projects" id="projects">
+      <Section tone="neutralLight" title="Projects" id="projects">
         <Stack space="xxxlarge">
           <Columns space="small" collapseBelow="tablet">
             <Column>
@@ -319,7 +319,7 @@ export default function App() {
         </Tiles>
       </Section>
 
-      <Section tone="brandAccent" title="Let's be friends" id="contact">
+      <Section tone="neutralLight" title="Let's be friends" id="contact">
         <Stack space="large">
           <Heading level="4" weight="weak">
             <TextLink

@@ -1,4 +1,5 @@
 import {
+  Bleed,
   Box,
   Button,
   Hidden,
@@ -30,35 +31,44 @@ export function NavigationBar<TSectionId extends string>({
       style={{ zIndex: 250 }}
     >
       <PageBlock width={pageWidth}>
-        <Hidden below="desktop">
-          <Actions>
-            {navItems.map(({ id, label }) => (
-              <Button
-                key={id}
-                size="small"
-                variant={activeSection === id ? 'ghost' : 'transparent'}
-                tone="neutral"
-                aria-pressed={activeSection === id}
-                onClick={() => onNavigate(id)}
-              >
-                {label}
-              </Button>
-            ))}
-          </Actions>
-        </Hidden>
-        <Hidden above="tablet">
-          <OverflowMenu
-            label={
-              navItems.find(({ id }) => id === activeSection)?.label ?? 'Menu'
-            }
-          >
-            {navItems.map(({ id, label }) => (
-              <MenuItem key={id} onClick={() => onNavigate(id)}>
-                {label}
-              </MenuItem>
-            ))}
-          </OverflowMenu>
-        </Hidden>
+        <Bleed
+          left={{
+            mobile: 'none',
+            tablet: 'none',
+            desktop: 'small',
+            wide: 'small',
+          }}
+        >
+          <Hidden below="desktop">
+            <Actions>
+              {navItems.map(({ id, label }) => (
+                <Button
+                  key={id}
+                  size="small"
+                  variant={activeSection === id ? 'ghost' : 'transparent'}
+                  tone="neutral"
+                  aria-pressed={activeSection === id}
+                  onClick={() => onNavigate(id)}
+                >
+                  {label}
+                </Button>
+              ))}
+            </Actions>
+          </Hidden>
+          <Hidden above="tablet">
+            <OverflowMenu
+              label={
+                navItems.find(({ id }) => id === activeSection)?.label ?? 'Menu'
+              }
+            >
+              {navItems.map(({ id, label }) => (
+                <MenuItem key={id} onClick={() => onNavigate(id)}>
+                  {label}
+                </MenuItem>
+              ))}
+            </OverflowMenu>
+          </Hidden>
+        </Bleed>
       </PageBlock>
     </Box>
   );
