@@ -2,16 +2,18 @@ import type { ReactNode } from 'react';
 import { Box, Heading, Stack, PageBlock } from 'braid-design-system';
 
 interface SectionProps {
-  tone: 'brandAccent' | 'surface';
+  tone: 'brandAccent' | 'surface' | 'neutralLight';
   title?: string;
   children?: ReactNode;
+  id?: string;
 }
-export function Section({ tone, title, children }: SectionProps) {
+export function Section({ tone, title, children, id }: SectionProps) {
   return (
     <Box
+      id={id}
       paddingY="xxxlarge"
-      paddingX={{ mobile: 'small', tablet: 'gutter' }}
       background={tone}
+      style={id ? { scrollMarginTop: '88px' } : undefined}
     >
       <PageBlock width="large">
         <Stack space="xxlarge">

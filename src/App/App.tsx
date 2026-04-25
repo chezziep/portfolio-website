@@ -1,10 +1,10 @@
 import 'braid-design-system/reset'; // <-- MUST BE FIRST to avoid CSS ordering issues
+import { useEffect, useState } from 'react';
 import {
   BraidProvider,
   Stack,
   Heading,
   Text,
-  Card,
   PageBlock,
   Columns,
   Column,
@@ -25,6 +25,7 @@ import {
 } from 'braid-design-system';
 import seekJobs from 'braid-design-system/themes/seekJobs';
 import { Section } from './Section';
+import { NavigationBar } from './NavigationBar';
 import chez from '../images/Chez-SM.png';
 import ethics from '../images/articleCover_ethics.png';
 import research from '../images/articleCover_research.png';
@@ -35,14 +36,94 @@ import { SkillTile } from './SkillTile';
 
 export default function App() {
   const pageWidth = 'large';
+  const navItems = [
+    { id: 'home', label: 'Home' },
+    { id: 'about', label: 'About' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'skills', label: 'Skills' },
+    { id: 'contact', label: 'Contact' },
+  ] as const;
+  const navOffset = 70;
+  const [activeSection, setActiveSection] =
+    useState<(typeof navItems)[number]['id']>('home');
+  const getScrollBehavior = () =>
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      ? 'auto'
+      : 'smooth';
+
+  const scrollToSection = (sectionId: (typeof navItems)[number]['id']) => {
+    if (sectionId === 'home') {
+      window.scrollTo({ top: 0, behavior: getScrollBehavior() });
+      setActiveSection('home');
+      return;
+    }
+
+    const target = document.getElementById(sectionId);
+    if (!target) {
+      return;
+    }
+
+    const y = target.getBoundingClientRect().top + window.scrollY - navOffset;
+    window.scrollTo({ top: y, behavior: getScrollBehavior() });
+    setActiveSection(sectionId);
+  };
+
+  useEffect(() => {
+    const sectionIds = navItems.map(({ id }) => id);
+    let ticking = false;
+
+    const updateActiveSection = () => {
+      if (window.scrollY < 60) {
+        setActiveSection('home');
+        ticking = false;
+        return;
+      }
+
+      const currentScrollPosition = window.scrollY + navOffset + 1;
+      let nextActiveSection: (typeof navItems)[number]['id'] = 'home';
+
+      for (const sectionId of sectionIds) {
+        const section = document.getElementById(sectionId);
+        if (!section) {
+          continue;
+        }
+
+        if (section.offsetTop <= currentScrollPosition) {
+          nextActiveSection = sectionId;
+        }
+      }
+
+      setActiveSection(nextActiveSection);
+      ticking = false;
+    };
+
+    const onScroll = () => {
+      if (ticking) {
+        return;
+      }
+
+      ticking = true;
+      window.requestAnimationFrame(updateActiveSection);
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    updateActiveSection();
+
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+    };
+  }, []);
 
   return (
     <BraidProvider theme={seekJobs}>
-      <Card>
-        <Text size="large">Navigation will go here...</Text>
-      </Card>
+      <NavigationBar
+        navItems={navItems}
+        activeSection={activeSection}
+        onNavigate={scrollToSection}
+        pageWidth={pageWidth}
+      />
 
-      <Section tone="brandAccent">
+      <Section tone="brandAccent" id="home">
         <Columns
           space={{ mobile: 'large', desktop: 'xxlarge' }}
           collapseBelow="desktop"
@@ -83,7 +164,7 @@ export default function App() {
         </Columns>
       </Section>
 
-      <Section tone="surface" title="About me">
+      <Section tone="surface" title="About me" id="about">
         <Stack space="xxlarge">
           <Columns
             space={{ mobile: 'large', desktop: 'xxlarge' }}
@@ -147,7 +228,7 @@ export default function App() {
         </Stack>
       </Section>
 
-      <Section tone="brandAccent" title="Projects">
+      <Section tone="neutralLight" title="Projects" id="projects">
         <Stack space="xxxlarge">
           <Columns space="small" collapseBelow="tablet">
             <Column>
@@ -212,7 +293,7 @@ export default function App() {
         </Stack>
       </Section>
 
-      <Section tone="surface" title="Skills">
+      <Section tone="surface" title="Skills" id="skills">
         <Tiles space="xxxlarge" columns={{ mobile: 1, tablet: 2, desktop: 3 }}>
           <SkillTile
             title="Systems implementation"
@@ -238,7 +319,7 @@ export default function App() {
         </Tiles>
       </Section>
 
-      <Section tone="brandAccent" title="Let's be friends">
+      <Section tone="neutralLight" title="Let's be friends" id="contact">
         <Stack space="large">
           <Heading level="4" weight="weak">
             <TextLink
