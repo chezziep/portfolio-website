@@ -75,30 +75,23 @@ export function NavigationBar<TSectionId extends string>({
         </Bleed>
       </PageBlock>
 
-      <Hidden above="tablet">
-        <Drawer
-          title="Menu"
-          open={menuOpen}
-          onClose={closeMenu}
-          position="left"
-        >
-          <Stack space="small">
-            {navItems.map(({ id, label }) => (
-              <Button
-                key={id}
-                variant={activeSection === id ? 'solid' : 'soft'}
-                tone={activeSection === id ? 'brandAccent' : 'neutral'}
-                onClick={() => {
-                  onNavigate(id);
-                  closeMenu();
-                }}
-              >
-                {label}
-              </Button>
-            ))}
-          </Stack>
-        </Drawer>
-      </Hidden>
+      <Drawer title="Menu" open={menuOpen} onClose={closeMenu} position="left">
+        <Stack space="small">
+          {navItems.map(({ id, label }) => (
+            <Button
+              key={id}
+              variant={activeSection === id ? 'solid' : 'soft'}
+              tone={activeSection === id ? 'brandAccent' : 'neutral'}
+              onClick={() => {
+                onNavigate(id);
+                closeMenu();
+              }}
+            >
+              {label}
+            </Button>
+          ))}
+        </Stack>
+      </Drawer>
     </Box>
   );
 }
