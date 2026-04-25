@@ -3,11 +3,13 @@ import {
   Box,
   Button,
   Hidden,
+  Inline,
   Actions,
-  MenuItem,
-  OverflowMenu,
+  Drawer,
+  Stack,
   PageBlock,
 } from 'braid-design-system';
+import { useState } from 'react';
 
 interface NavigationBarProps<TSectionId extends string> {
   navItems: readonly { id: TSectionId; label: string }[];
@@ -22,6 +24,9 @@ export function NavigationBar<TSectionId extends string>({
   onNavigate,
   pageWidth,
 }: NavigationBarProps<TSectionId>) {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const closeMenu = () => setMenuOpen(false);
+
   return (
     <Box
       background="brandAccent"
@@ -56,20 +61,44 @@ export function NavigationBar<TSectionId extends string>({
             </Actions>
           </Hidden>
           <Hidden above="tablet">
-            <OverflowMenu
-              label={
-                navItems.find(({ id }) => id === activeSection)?.label ?? 'Menu'
-              }
-            >
-              {navItems.map(({ id, label }) => (
-                <MenuItem key={id} onClick={() => onNavigate(id)}>
-                  {label}
-                </MenuItem>
-              ))}
-            </OverflowMenu>
+            <Inline space="none">
+              <Button
+                size="small"
+                variant="ghost"
+                tone="neutral"
+                onClick={() => setMenuOpen(true)}
+              >
+                Menu
+              </Button>
+            </Inline>
           </Hidden>
         </Bleed>
       </PageBlock>
+
+      <Hidden above="tablet">
+        <Drawer
+          title="Menu"
+          open={menuOpen}
+          onClose={closeMenu}
+          position="left"
+        >
+          <Stack space="small">
+            {navItems.map(({ id, label }) => (
+              <Button
+                key={id}
+                variant={activeSection === id ? 'solid' : 'soft'}
+                tone={activeSection === id ? 'brandAccent' : 'neutral'}
+                onClick={() => {
+                  onNavigate(id);
+                  closeMenu();
+                }}
+              >
+                {label}
+              </Button>
+            ))}
+          </Stack>
+        </Drawer>
+      </Hidden>
     </Box>
   );
 }
