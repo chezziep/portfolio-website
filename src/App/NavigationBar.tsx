@@ -30,7 +30,7 @@ export function NavigationBar<TSectionId extends string>({
   return (
     <Box
       background="brandAccent"
-      paddingY="small"
+      paddingY="xsmall"
       position="sticky"
       top={0}
       style={{ zIndex: 250 }}
@@ -39,9 +39,7 @@ export function NavigationBar<TSectionId extends string>({
         <Bleed
           left={{
             mobile: 'none',
-            tablet: 'none',
-            desktop: 'small',
-            wide: 'small',
+            tablet: 'xsmall',
           }}
         >
           <Hidden below="desktop">
