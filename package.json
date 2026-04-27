@@ -10,7 +10,7 @@
     "format": "sku format",
     "lint": "sku lint",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist/production"
   },
   "dependencies": {
     "braid-design-system": "^33.11.5",
