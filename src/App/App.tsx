@@ -43,7 +43,7 @@ export default function App() {
     { id: 'skills', label: 'Skills' },
     { id: 'contact', label: 'Contact' },
   ] as const;
-  const navOffset = 70;
+  const navOffset = 64;
   const [activeSection, setActiveSection] =
     useState<(typeof navItems)[number]['id']>('home');
   const getScrollBehavior = () =>
