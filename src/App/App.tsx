@@ -209,19 +209,19 @@ export default function App() {
             <ArticleCard
               title="Designing beyond the system: Going custom with purpose"
               subtitle="How custom solutions uplift products, evolve design systems and save money."
-              link="https://medium.com/design-systems-collective/designing-beyond-the-system-going-custom-with-purpose-6623a08d49b7"
+              link="https://www.designsystemscollective.com/designing-beyond-the-system-going-custom-with-purpose-6623a08d49b7"
               image={custom}
             />
             <ArticleCard
               title="With great persuasion comes great responsibility: Ethics in design"
               subtitle="Practical frameworks to ensure ethical and responsible product design."
-              link="https://medium.com/p/adedcbe1bb66"
+              link="https://medium.com/seek-blog/with-great-persuasion-comes-great-responsibility-ethics-in-design-adedcbe1bb66"
               image={ethics}
             />
             <ArticleCard
               title="Choosing the right user research method for your project"
               subtitle="How to set your research up for success by choosing the best method for the best outcome."
-              link="https://medium.com/p/3c7adace3bb9"
+              link="https://uxdesign.cc/choosing-the-right-user-research-method-for-your-project-3c7adace3bb9"
               image={research}
             />
           </Tiles>
