@@ -370,7 +370,7 @@ export default function App() {
           <Heading level="4" weight="weak">
             <TextLink
               icon={<IconSocialGitHub />}
-              href="https://github.com/cherylpaulsen"
+              href="https://github.com/chezziep"
               target="_blank"
               weight="weak"
             >
@@ -392,11 +392,12 @@ export default function App() {
 
       <Box
         background="neutral"
-        paddingY="xlarge"
+        paddingTop="xxxlarge"
+        paddingBottom="xlarge"
         paddingX={{ mobile: 'small', tablet: 'gutter' }}
       >
         <PageBlock width={pageWidth}>
-          <Text size="standard">
+          <Text size="small">
             Made with{' '}
             <TextLink
               href="https://seek-oss.github.io/braid-design-system"
