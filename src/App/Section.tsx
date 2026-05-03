@@ -18,7 +18,7 @@ export function Section({ tone, title, children, id }: SectionProps) {
       <PageBlock width="large">
         <Stack space="xxlarge">
           {title ? (
-            <Heading level="1" weight="weak">
+            <Heading level="1" component="h2" weight="weak">
               {title}
             </Heading>
           ) : null}
