@@ -2,7 +2,6 @@
   "name": "my-braid-website",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://github.com/chezziep/portfolio-website",
   "scripts": {
     "start": "sku start",
     "build": "sku build",
