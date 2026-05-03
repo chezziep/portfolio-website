@@ -135,11 +135,20 @@ export default function App() {
               borderRadius="full"
               overflow="hidden"
               style={{
-                width: '450px',
-                height: '450px',
+                maxWidth: '450px',
+                maxHeight: '450px',
+                aspectRatio: '1 / 1',
               }}
             >
-              <img src={chez} alt="Chez" width="450px" height="450px" />
+              <img
+                src={chez}
+                alt="Chez"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  aspectRatio: '1 / 1',
+                }}
+              />
             </Box>
           </Column>
           <Column>
