@@ -50,7 +50,7 @@ export function NavigationBar<TSectionId extends string>({
                   size="small"
                   variant={activeSection === id ? 'ghost' : 'transparent'}
                   tone="neutral"
-                  aria-pressed={activeSection === id}
+                  aria-current={activeSection === id ? 'true' : undefined}
                   onClick={() => onNavigate(id)}
                 >
                   {label}

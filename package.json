@@ -2,14 +2,13 @@
   "name": "my-braid-website",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://github.com/chezziep/portfolio-website",
   "scripts": {
     "start": "sku start",
     "build": "sku build",
     "test": "sku test",
     "format": "sku format",
     "lint": "sku lint",
-    "predeploy": "npm run build && cp dist/production/index.html dist/index.html",
+    "predeploy": "pnpm build && cp dist/production/index.html dist/index.html",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {

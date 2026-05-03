@@ -19,6 +19,7 @@ export function HeroCard({
 }: HeroCardProps) {
   const minHeight = size === 'standard' ? '250px' : '500px';
   const headingLevel = size === 'standard' ? '4' : '2';
+  const headingComponent = size === 'standard' ? 'h4' : 'h3';
   const textSize = size === 'standard' ? 'standard' : 'large';
 
   return (
@@ -71,7 +72,7 @@ export function HeroCard({
         >
           <Stack space="small">
             {featured ? <Badge tone="promote">Case study</Badge> : null}
-            <Heading level={headingLevel}>{title}</Heading>
+            <Heading level={headingLevel} component={headingComponent}>{title}</Heading>
             {subtitle ? <Text size={textSize}>{subtitle}</Text> : null}
           </Stack>
         </Box>

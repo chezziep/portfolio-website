@@ -282,19 +282,12 @@ export default function App() {
             </Column>
             <Column>
               <Stack space="small">
-                <Columns space="none" collapseBelow="tablet">
-                  <Column>
-                    <HeroCard
-                      size="standard"
-                      title="Designing a service blueprint for a multi-channel experience"
-                      link="https://medium.com/@cheryl.paulsen/anz-digital-transformation-service-design-cf167827e58b"
-                      image="https://miro.medium.com/v2/resize:fit:720/format:webp/1*BRG7l1Wz0qqN7cxRl8jH5g.png"
-                    />
-                  </Column>
-                  <Column width="content">
-                    <Box />
-                  </Column>
-                </Columns>
+                <HeroCard
+                  size="standard"
+                  title="Designing a service blueprint for a multi-channel experience"
+                  link="https://medium.com/@cheryl.paulsen/anz-digital-transformation-service-design-cf167827e58b"
+                  image="https://miro.medium.com/v2/resize:fit:720/format:webp/1*BRG7l1Wz0qqN7cxRl8jH5g.png"
+                />
                 <HeroCard
                   featured={true}
                   size="large"
@@ -337,7 +330,7 @@ export default function App() {
 
       <Section tone="neutralLight" title="Let's be friends" id="contact">
         <Stack space="large">
-          <Heading level="4" weight="weak">
+          <Text size="large">
             <TextLink
               icon={<IconSocialLinkedIn />}
               href="https://www.linkedin.com/in/cherylpaulsen/"
@@ -346,8 +339,8 @@ export default function App() {
             >
               LinkedIn
             </TextLink>
-          </Heading>
-          <Heading level="4" weight="weak">
+          </Text>
+          <Text size="large">
             <TextLink
               icon={<IconSocialMedium />}
               href="https://medium.com/@cheryl.paulsen"
@@ -356,8 +349,8 @@ export default function App() {
             >
               Medium
             </TextLink>
-          </Heading>
-          <Heading level="4" weight="weak">
+          </Text>
+          <Text size="large">
             <TextLink
               icon={<IconLink />}
               href="https://dribbble.com/cherylpaulsen"
@@ -366,8 +359,8 @@ export default function App() {
             >
               Dribble
             </TextLink>
-          </Heading>
-          <Heading level="4" weight="weak">
+          </Text>
+          <Text size="large">
             <TextLink
               icon={<IconSocialGitHub />}
               href="https://github.com/chezziep"
@@ -376,8 +369,8 @@ export default function App() {
             >
               GitHub
             </TextLink>
-          </Heading>
-          <Heading level="4" weight="weak">
+          </Text>
+          <Text size="large">
             <TextLink
               icon={<IconSocialX />}
               href="https://x.com/Cheryl_Paulsen"
@@ -386,7 +379,7 @@ export default function App() {
             >
               X
             </TextLink>
-          </Heading>
+          </Text>
         </Stack>
       </Section>
 

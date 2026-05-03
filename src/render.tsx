@@ -31,7 +31,9 @@ const skuRender: Render<RenderContext> = {
       <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="preconnect" href="https://www.seek.com.au" />
+        <title>Cheryl Paulsen — Principal Product Designer</title>
+        <meta name="description" content="Portfolio of Cheryl Paulsen, Principal Product Designer at SEEK and member of the Braid design system team. Designer bridging design and technology.">
+        <link rel="preconnect" href="https://miro.medium.com" />
         ${seekSansHeadTags}
         ${headTags}
       </head>
