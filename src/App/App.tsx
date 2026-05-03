@@ -282,19 +282,12 @@ export default function App() {
             </Column>
             <Column>
               <Stack space="small">
-                <Columns space="none" collapseBelow="tablet">
-                  <Column>
-                    <HeroCard
-                      size="standard"
-                      title="Designing a service blueprint for a multi-channel experience"
-                      link="https://medium.com/@cheryl.paulsen/anz-digital-transformation-service-design-cf167827e58b"
-                      image="https://miro.medium.com/v2/resize:fit:720/format:webp/1*BRG7l1Wz0qqN7cxRl8jH5g.png"
-                    />
-                  </Column>
-                  <Column width="content">
-                    <Box />
-                  </Column>
-                </Columns>
+                <HeroCard
+                  size="standard"
+                  title="Designing a service blueprint for a multi-channel experience"
+                  link="https://medium.com/@cheryl.paulsen/anz-digital-transformation-service-design-cf167827e58b"
+                  image="https://miro.medium.com/v2/resize:fit:720/format:webp/1*BRG7l1Wz0qqN7cxRl8jH5g.png"
+                />
                 <HeroCard
                   featured={true}
                   size="large"
