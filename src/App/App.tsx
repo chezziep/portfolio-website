@@ -182,12 +182,12 @@ export default function App() {
             <Column width="1/2">
               <Stack space="large">
                 <Text size="large">
-                  I&rsquo;m a Product Designer with over 15 years experience and
-                  a bachelor&rsquo;s degree in Psychology. I love applying my
-                  behavioural knowledge to designs so I can help create products
-                  people love. Working in design systems, I collaborate with
-                  engineers to implement and maintain components, patterns and
-                  usage guidelines that ensure best practice.
+                  I&rsquo;m a Product Designer with over 15 years of experience
+                  and a bachelor&rsquo;s degree in Psychology. I love applying
+                  behavioural insight to design to help create products people
+                  love. Working in design systems, I collaborate with engineers
+                  to build and maintain components, patterns, and usage
+                  guidelines that drive best practice across teams.
                 </Text>
               </Stack>
             </Column>
@@ -196,15 +196,22 @@ export default function App() {
                 <Text size="large">
                   I have front-end development experience spanning HTML, CSS and
                   JavaScript, as well as working knowledge in React, Git/GitHub
-                  and Cursor IDE. I create code-based prototypes combining my
-                  design expertise with technical execution. I like to share my
-                  learnings and experiences with other designers in the
-                  community. Check out a few of my recent blog articles below,
-                  or see more on{' '}
+                  and Cursor IDE (it's{' '}
+                  <TextLink
+                    href="https://github.com/chezziep/portfolio-website"
+                    weight="weak"
+                    target="_blank"
+                  >
+                    how I made
+                  </TextLink>{' '}
+                  this website!). I create code-based prototypes that bridge
+                  design thinking and technical execution. I enjoy sharing my
+                  learnings with the broader community, you can find my recent
+                  writing here or explore more on {''}
                   <TextLink
                     href="https://medium.com/@cheryl.paulsen"
-                    target="_blank"
                     weight="weak"
+                    target="_blank"
                   >
                     Medium
                   </TextLink>
