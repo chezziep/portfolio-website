@@ -41,7 +41,7 @@ export function ArticleCard({
                 maxHeight: 150,
               }}
             >
-              <img src={image} />
+              <img src={image} alt={title} />
             </Box>
           </Bleed>
           <Stack space="medium">
