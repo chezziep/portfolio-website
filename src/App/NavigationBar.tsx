@@ -81,8 +81,8 @@ export function NavigationBar<TSectionId extends string>({
               variant={activeSection === id ? 'solid' : 'soft'}
               tone={activeSection === id ? 'brandAccent' : 'neutral'}
               onClick={() => {
-                onNavigate(id);
                 closeMenu();
+                setTimeout(() => onNavigate(id), 300); // ~matches drawer close animation
               }}
             >
               {label}
