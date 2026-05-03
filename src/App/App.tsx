@@ -337,7 +337,7 @@ export default function App() {
 
       <Section tone="neutralLight" title="Let's be friends" id="contact">
         <Stack space="large">
-          <Heading level="4" weight="weak">
+          <Text size="large">
             <TextLink
               icon={<IconSocialLinkedIn />}
               href="https://www.linkedin.com/in/cherylpaulsen/"
@@ -346,8 +346,8 @@ export default function App() {
             >
               LinkedIn
             </TextLink>
-          </Heading>
-          <Heading level="4" weight="weak">
+          </Text>
+          <Text size="large">
             <TextLink
               icon={<IconSocialMedium />}
               href="https://medium.com/@cheryl.paulsen"
@@ -356,8 +356,8 @@ export default function App() {
             >
               Medium
             </TextLink>
-          </Heading>
-          <Heading level="4" weight="weak">
+          </Text>
+          <Text size="large">
             <TextLink
               icon={<IconLink />}
               href="https://dribbble.com/cherylpaulsen"
@@ -366,8 +366,8 @@ export default function App() {
             >
               Dribble
             </TextLink>
-          </Heading>
-          <Heading level="4" weight="weak">
+          </Text>
+          <Text size="large">
             <TextLink
               icon={<IconSocialGitHub />}
               href="https://github.com/chezziep"
@@ -376,8 +376,8 @@ export default function App() {
             >
               GitHub
             </TextLink>
-          </Heading>
-          <Heading level="4" weight="weak">
+          </Text>
+          <Text size="large">
             <TextLink
               icon={<IconSocialX />}
               href="https://x.com/Cheryl_Paulsen"
@@ -386,7 +386,7 @@ export default function App() {
             >
               X
             </TextLink>
-          </Heading>
+          </Text>
         </Stack>
       </Section>
 
