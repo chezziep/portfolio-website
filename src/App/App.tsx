@@ -22,7 +22,6 @@ import {
   IconSocialMedium,
   IconSocialGitHub,
   IconLink,
-  Divider,
 } from 'braid-design-system';
 import seekJobs from 'braid-design-system/themes/seekJobs';
 import { Section } from './Section';
