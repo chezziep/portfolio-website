@@ -30,7 +30,7 @@ import chez from '../images/Chez-SM.png';
 import ethics from '../images/articleCover_ethics.png';
 import research from '../images/articleCover_research.png';
 import custom from '../images/articleCover_custom.png';
-import caseStudyPatterns from '../images/casesStudy_patterns.png';
+import caseStudyPatterns from '../images/caseStudy_patterns.png';
 import caseStudyPricing from '../images/caseStudy_pricing.png';
 import caseStudyResource from '../images/caseStudy_resource.png';
 import caseStudyBlueprint from '../images/caseStudy_blueprint.png';
