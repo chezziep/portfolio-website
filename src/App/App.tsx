@@ -221,7 +221,7 @@ export default function App() {
             </Column>
           </Columns>
 
-          <Tiles space="small" columns={{ mobile: 1, desktop: 3 }}>
+          <Tiles space="medium" columns={{ mobile: 1, desktop: 3 }}>
             <ArticleCard
               title="Designing beyond the system: Going custom with purpose"
               subtitle="How custom solutions uplift products, evolve design systems and save money."
@@ -246,20 +246,20 @@ export default function App() {
 
       <Section tone="neutralLight" title="Projects" id="projects">
         <Stack space="xxxlarge">
-          <Columns space="small" collapseBelow="tablet">
+          <Columns space="medium" collapseBelow="tablet">
             <Column>
-              <Stack space="small">
+              <Stack space="medium">
                 <HeroCard
                   featured={true}
                   size="large"
-                  title="From components to consistency: Building our design
+                  title="Components to consistency: Building our design
                             system pattern library"
                   subtitle="Establishing scalable solutions for recurring design
                             problems across Seek's products."
                   link="https://www.designsystemscollective.com/from-components-to-consistency-building-our-design-system-pattern-library-5be3e6b761ce"
                   image="https://cherylpaulsen.com/images/casestudy01_cover.png"
                 />
-                <Columns space="small" collapseBelow="tablet">
+                <Columns space="medium" collapseBelow="tablet">
                   <Column>
                     <HeroCard
                       size="standard"
@@ -281,7 +281,7 @@ export default function App() {
               </Stack>
             </Column>
             <Column>
-              <Stack space="small">
+              <Stack space="medium">
                 <HeroCard
                   size="standard"
                   title="Designing a service blueprint for a multi-channel experience"

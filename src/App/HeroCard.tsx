@@ -17,10 +17,11 @@ export function HeroCard({
   size = 'large',
   featured = false,
 }: HeroCardProps) {
-  const minHeight = size === 'standard' ? '250px' : '500px';
+  const minHeight = size === 'standard' ? '300px' : '500px';
   const headingLevel = size === 'standard' ? '4' : '2';
   const headingComponent = size === 'standard' ? 'h4' : 'h3';
   const textSize = size === 'standard' ? 'standard' : 'large';
+  const backgroundTone = size === 'standard' ? 'promote' : 'formAccent';
 
   return (
     <Link href={link} target="_blank">
@@ -47,18 +48,22 @@ export function HeroCard({
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.transform = 'scale(1.05)';
+            const overlay = e.currentTarget.nextElementSibling;
+            if (overlay instanceof HTMLElement) overlay.style.opacity = '1.0';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.transform = 'scale(1)';
+            const overlay = e.currentTarget.nextElementSibling;
+            if (overlay instanceof HTMLElement) overlay.style.opacity = '0.8';
           }}
         />
         <Box
           position="absolute"
           inset={0}
+          background={backgroundTone}
           style={{
-            background:
-              'linear-gradient(to top, rgba(5,26,23,0.7) 0%, rgba(5,26,23,0.2) 50%, transparent 100%)',
-            mixBlendMode: 'multiply',
+            opacity: 0.7,
+            transition: 'opacity 0.3s ease',
             pointerEvents: 'none',
           }}
         />
@@ -72,7 +77,13 @@ export function HeroCard({
         >
           <Stack space="small">
             {featured ? <Badge tone="promote">Case study</Badge> : null}
-            <Heading level={headingLevel} component={headingComponent}>{title}</Heading>
+            <Heading
+              level={headingLevel}
+              component={headingComponent}
+              weight="weak"
+            >
+              {title}
+            </Heading>
             {subtitle ? <Text size={textSize}>{subtitle}</Text> : null}
           </Stack>
         </Box>
