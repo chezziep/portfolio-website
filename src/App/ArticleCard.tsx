@@ -30,7 +30,7 @@ export function ArticleCard({
       boxShadow="large"
       height="full"
     >
-      <Spread space="small" direction="vertical">
+      <Spread space="large" direction="vertical">
         <Stack space="large">
           <Bleed horizontal="medium" top="medium">
             <Box

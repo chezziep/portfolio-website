@@ -30,6 +30,11 @@ import chez from '../images/Chez-SM.png';
 import ethics from '../images/articleCover_ethics.png';
 import research from '../images/articleCover_research.png';
 import custom from '../images/articleCover_custom.png';
+import caseStudyPatterns from '../images/caseStudy_patterns.png';
+import caseStudyPricing from '../images/caseStudy_pricing.png';
+import caseStudyResource from '../images/caseStudy_resource.png';
+import caseStudyBlueprint from '../images/caseStudy_blueprint.png';
+import caseStudyIntegrations from '../images/caseStudy_integrations.png';
 import { ArticleCard } from './ArticleCard';
 import { HeroCard } from './HeroCard';
 import { SkillTile } from './SkillTile';
@@ -221,7 +226,7 @@ export default function App() {
             </Column>
           </Columns>
 
-          <Tiles space="small" columns={{ mobile: 1, desktop: 3 }}>
+          <Tiles space="medium" columns={{ mobile: 1, desktop: 3 }}>
             <ArticleCard
               title="Designing beyond the system: Going custom with purpose"
               subtitle="How custom solutions uplift products, evolve design systems and save money."
@@ -236,7 +241,7 @@ export default function App() {
             />
             <ArticleCard
               title="Choosing the right user research method for your project"
-              subtitle="How to set your research up for success by choosing the best method for the best outcome."
+              subtitle="Set your research up for success by choosing the best method for the best outcome."
               link="https://uxdesign.cc/choosing-the-right-user-research-method-for-your-project-3c7adace3bb9"
               image={research}
             />
@@ -246,27 +251,27 @@ export default function App() {
 
       <Section tone="neutralLight" title="Projects" id="projects">
         <Stack space="xxxlarge">
-          <Columns space="small" collapseBelow="tablet">
+          <Columns space="medium" collapseBelow="tablet">
             <Column>
-              <Stack space="small">
+              <Stack space="medium">
                 <HeroCard
                   featured={true}
                   size="large"
-                  title="From components to consistency: Building our design
+                  title="Components to consistency: Building our design
                             system pattern library"
                   subtitle="Establishing scalable solutions for recurring design
                             problems across Seek's products."
                   link="https://www.designsystemscollective.com/from-components-to-consistency-building-our-design-system-pattern-library-5be3e6b761ce"
-                  image="https://cherylpaulsen.com/images/casestudy01_cover.png"
+                  image={caseStudyPatterns}
                 />
-                <Columns space="small" collapseBelow="tablet">
+                <Columns space="medium" collapseBelow="tablet">
                   <Column>
                     <HeroCard
                       size="standard"
                       featured={true}
                       title="Supporting a pricing model transformation"
                       link="https://medium.com/@cheryl.paulsen/seek-pricing-transformation-ddef8f756b3"
-                      image="https://miro.medium.com/v2/resize:fit:720/format:webp/1*vuhdHaCoEqng2wabjVm1-g.jpeg"
+                      image={caseStudyPricing}
                     />
                   </Column>
                   <Column>
@@ -274,19 +279,19 @@ export default function App() {
                       size="standard"
                       title="Creating a UX research resource for the design community"
                       link="https://medium.com/@cheryl.paulsen/rubik-a-ux-resource-for-the-design-community-cf477ead6de6"
-                      image="https://cherylpaulsen.com/images/casestudy03_cover.png"
+                      image={caseStudyResource}
                     />
                   </Column>
                 </Columns>
               </Stack>
             </Column>
             <Column>
-              <Stack space="small">
+              <Stack space="medium">
                 <HeroCard
                   size="standard"
                   title="Designing a service blueprint for a multi-channel experience"
                   link="https://medium.com/@cheryl.paulsen/anz-digital-transformation-service-design-cf167827e58b"
-                  image="https://miro.medium.com/v2/resize:fit:720/format:webp/1*BRG7l1Wz0qqN7cxRl8jH5g.png"
+                  image={caseStudyBlueprint}
                 />
                 <HeroCard
                   featured={true}
@@ -294,7 +299,7 @@ export default function App() {
                   title="Driving a product experience across multiple integrations to increase adoption"
                   subtitle="Elevating the quality and consistency of experience across third party integrations."
                   link="https://medium.com/@cheryl.paulsen/product-experience-across-integrations-32d925d339b2"
-                  image="https://miro.medium.com/v2/resize:fit:720/format:webp/1*8NP9r_LYr2SZ8nOYzBM1yg.png"
+                  image={caseStudyIntegrations}
                 />
               </Stack>
             </Column>
