@@ -237,7 +237,7 @@ export default function App() {
             />
             <ArticleCard
               title="Choosing the right user research method for your project"
-              subtitle="How to set your research up for success by choosing the best method for the best outcome."
+              subtitle="Set your research up for success by choosing the best method for the best outcome."
               link="https://uxdesign.cc/choosing-the-right-user-research-method-for-your-project-3c7adace3bb9"
               image={research}
             />

@@ -18,7 +18,7 @@ export function HeroCard({
   featured = false,
 }: HeroCardProps) {
   const minHeight = size === 'standard' ? '300px' : '500px';
-  const headingLevel = size === 'standard' ? '4' : '2';
+  const headingLevel = size === 'standard' ? '3' : '2';
   const headingComponent = size === 'standard' ? 'h4' : 'h3';
   const textSize = size === 'standard' ? 'standard' : 'large';
   const backgroundTone = size === 'standard' ? 'promote' : 'formAccent';
@@ -55,7 +55,7 @@ export function HeroCard({
           onMouseLeave={(e) => {
             e.currentTarget.style.transform = 'scale(1)';
             const overlay = e.currentTarget.nextElementSibling;
-            if (overlay instanceof HTMLElement) overlay.style.opacity = '0.80';
+            if (overlay instanceof HTMLElement) overlay.style.opacity = '0.85';
           }}
         />
         <Box
@@ -76,7 +76,7 @@ export function HeroCard({
           padding="large"
           style={{ pointerEvents: 'none' }}
         >
-          <Stack space="small">
+          <Stack space="large">
             {featured ? <Badge tone="promote">Case study</Badge> : null}
             <Heading
               level={headingLevel}
