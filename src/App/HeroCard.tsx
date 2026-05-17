@@ -70,6 +70,15 @@ export function HeroCard({
         />
         <Box
           position="absolute"
+          inset={0}
+          style={{
+            background:
+              'radial-gradient(ellipse at center, transparent 65%, rgba(0, 0, 0, 0.15) 100%)',
+            pointerEvents: 'none',
+          }}
+        />
+        <Box
+          position="absolute"
           bottom={0}
           left={0}
           right={0}
