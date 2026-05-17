@@ -43,18 +43,19 @@ export function HeroCard({
             backgroundImage: `url(${image})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
+            filter: 'grayscale(50%)',
             transition: 'transform 0.3s ease',
             transform: 'scale(1)',
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.transform = 'scale(1.05)';
             const overlay = e.currentTarget.nextElementSibling;
-            if (overlay instanceof HTMLElement) overlay.style.opacity = '1.0';
+            if (overlay instanceof HTMLElement) overlay.style.opacity = '0.95';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.transform = 'scale(1)';
             const overlay = e.currentTarget.nextElementSibling;
-            if (overlay instanceof HTMLElement) overlay.style.opacity = '0.8';
+            if (overlay instanceof HTMLElement) overlay.style.opacity = '0.80';
           }}
         />
         <Box
