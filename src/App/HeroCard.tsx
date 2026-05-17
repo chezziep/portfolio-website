@@ -22,6 +22,8 @@ export function HeroCard({
   const headingComponent = size === 'standard' ? 'h4' : 'h3';
   const textSize = size === 'standard' ? 'standard' : 'large';
   const backgroundTone = size === 'standard' ? 'promote' : 'formAccent';
+  const overlayOpacityDefault = 0.85;
+  const overlayOpacityHover = 0.95;
 
   return (
     <Link href={link} target="_blank">
@@ -50,12 +52,14 @@ export function HeroCard({
           onMouseEnter={(e) => {
             e.currentTarget.style.transform = 'scale(1.05)';
             const overlay = e.currentTarget.nextElementSibling;
-            if (overlay instanceof HTMLElement) overlay.style.opacity = '0.95';
+            if (overlay instanceof HTMLElement)
+              overlay.style.opacity = String(overlayOpacityHover);
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.transform = 'scale(1)';
             const overlay = e.currentTarget.nextElementSibling;
-            if (overlay instanceof HTMLElement) overlay.style.opacity = '0.85';
+            if (overlay instanceof HTMLElement)
+              overlay.style.opacity = String(overlayOpacityDefault);
           }}
         />
         <Box
@@ -63,7 +67,7 @@ export function HeroCard({
           inset={0}
           background={backgroundTone}
           style={{
-            opacity: 0.7,
+            opacity: overlayOpacityDefault,
             transition: 'opacity 0.3s ease',
             pointerEvents: 'none',
           }}
