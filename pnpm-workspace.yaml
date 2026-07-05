@@ -1,9 +1,12 @@
-ignoredBuiltDependencies:
-  - '@swc/core'
-  - core-js-pure
-  - esbuild
-  - sku
-  - unrs-resolver
+allowBuilds:
+  '@swc/core': true
+  core-js-pure: false
+  esbuild: true
+  sku: true
+  unrs-resolver: true
+
+configDependencies:
+  pnpm-plugin-sku: 0.1.0
 
 packages:
   - 'packages/*'
