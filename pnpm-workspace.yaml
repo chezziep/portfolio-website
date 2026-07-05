@@ -4,3 +4,6 @@ ignoredBuiltDependencies:
   - esbuild
   - sku
   - unrs-resolver
+
+packages:
+  - 'packages/*'
