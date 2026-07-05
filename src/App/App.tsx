@@ -1,5 +1,6 @@
 import 'braid-design-system/reset'; // <-- MUST BE FIRST to avoid CSS ordering issues
 import { useEffect, useState } from 'react';
+import { formatDate } from '@chez/utils';
 import {
   BraidProvider,
   Stack,
@@ -11,6 +12,7 @@ import {
   TextLink,
   Box,
   Tiles,
+  Spread,
   IconRocket,
   IconDocument,
   IconPeople,
@@ -390,22 +392,26 @@ export default function App() {
 
       <Box
         background="neutral"
-        paddingTop="xxxlarge"
-        paddingBottom="xlarge"
+        paddingY="xlarge"
         paddingX={{ mobile: 'small', tablet: 'gutter' }}
       >
         <PageBlock width={pageWidth}>
-          <Text size="small">
-            Made with{' '}
-            <TextLink
-              href="https://seek-oss.github.io/braid-design-system"
-              target="_blank"
-              weight="weak"
-            >
-              Braid design system
-            </TextLink>{' '}
-            ❤️
-          </Text>
+          <Spread space="small">
+            <Text size="small">
+              Made with{' '}
+              <TextLink
+                href="https://seek-oss.github.io/braid-design-system"
+                target="_blank"
+                weight="weak"
+              >
+                Braid design system
+              </TextLink>{' '}
+              ❤️
+            </Text>
+            <Text size="small" tone="secondary">
+              Last updated: {formatDate('2026-07-05')}
+            </Text>
+          </Spread>
         </PageBlock>
       </Box>
     </BraidProvider>
